@@ -18,6 +18,9 @@
 		3F6001741A840EA900C3E9C0 /* Concert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F6001721A840EA900C3E9C0 /* Concert.swift */; };
 		3F6001761A84102C00C3E9C0 /* Band.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F6001751A84102C00C3E9C0 /* Band.swift */; };
 		3F6001771A84102C00C3E9C0 /* Band.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F6001751A84102C00C3E9C0 /* Band.swift */; };
+		3F6001791A84119A00C3E9C0 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F6001781A84119A00C3E9C0 /* CoreData.framework */; };
+		3F60017C1A8412F200C3E9C0 /* Concerts.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3F60017A1A8412F200C3E9C0 /* Concerts.xcdatamodeld */; };
+		3F60017D1A8412F200C3E9C0 /* Concerts.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3F60017A1A8412F200C3E9C0 /* Concerts.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +47,8 @@
 		3F6001621A840BEC00C3E9C0 /* FandomTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FandomTests.swift; sourceTree = "<group>"; };
 		3F6001721A840EA900C3E9C0 /* Concert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Concert.swift; sourceTree = "<group>"; };
 		3F6001751A84102C00C3E9C0 /* Band.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Band.swift; sourceTree = "<group>"; };
+		3F6001781A84119A00C3E9C0 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		3F60017B1A8412F200C3E9C0 /* Concerts.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Concerts.xcdatamodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +56,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3F6001791A84119A00C3E9C0 /* CoreData.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -67,6 +73,7 @@
 		3F60013C1A840BEC00C3E9C0 = {
 			isa = PBXGroup;
 			children = (
+				3F6001781A84119A00C3E9C0 /* CoreData.framework */,
 				3F6001471A840BEC00C3E9C0 /* Fandom */,
 				3F60015F1A840BEC00C3E9C0 /* FandomTests */,
 				3F6001461A840BEC00C3E9C0 /* Products */,
@@ -126,6 +133,7 @@
 			children = (
 				3F6001721A840EA900C3E9C0 /* Concert.swift */,
 				3F6001751A84102C00C3E9C0 /* Band.swift */,
+				3F60017A1A8412F200C3E9C0 /* Concerts.xcdatamodeld */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -241,6 +249,7 @@
 			files = (
 				3F60014F1A840BEC00C3E9C0 /* DetailViewController.swift in Sources */,
 				3F60014D1A840BEC00C3E9C0 /* MasterViewController.swift in Sources */,
+				3F60017C1A8412F200C3E9C0 /* Concerts.xcdatamodeld in Sources */,
 				3F6001761A84102C00C3E9C0 /* Band.swift in Sources */,
 				3F6001731A840EA900C3E9C0 /* Concert.swift in Sources */,
 				3F60014B1A840BEC00C3E9C0 /* AppDelegate.swift in Sources */,
@@ -253,6 +262,7 @@
 			files = (
 				3F6001771A84102C00C3E9C0 /* Band.swift in Sources */,
 				3F6001741A840EA900C3E9C0 /* Concert.swift in Sources */,
+				3F60017D1A8412F200C3E9C0 /* Concerts.xcdatamodeld in Sources */,
 				3F6001631A840BEC00C3E9C0 /* FandomTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -449,6 +459,19 @@
 			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		3F60017A1A8412F200C3E9C0 /* Concerts.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				3F60017B1A8412F200C3E9C0 /* Concerts.xcdatamodel */,
+			);
+			currentVersion = 3F60017B1A8412F200C3E9C0 /* Concerts.xcdatamodel */;
+			path = Concerts.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 3F60013D1A840BEC00C3E9C0 /* Project object */;
 }

@@ -11,7 +11,7 @@ import UIKit
 class Concert: NSObject {
     
     var score = 0
-    var band = []
+    var bands = []
     var date = NSDate()
    
 }
