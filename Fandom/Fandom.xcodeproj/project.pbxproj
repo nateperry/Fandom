@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3F4369C01A844ABD0081C440 /* Concerts.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3F4369BE1A844ABD0081C440 /* Concerts.xcdatamodeld */; };
+		3F4369C11A844ABD0081C440 /* Concerts.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3F4369BE1A844ABD0081C440 /* Concerts.xcdatamodeld */; };
+		3F4369C31A844CFB0081C440 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F4369C21A844CFB0081C440 /* CoreData.framework */; };
 		3F7B915A1A844597000ADAA7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F7B91591A844597000ADAA7 /* AppDelegate.swift */; };
 		3F7B915C1A844597000ADAA7 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F7B915B1A844597000ADAA7 /* FirstViewController.swift */; };
 		3F7B915E1A844597000ADAA7 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F7B915D1A844597000ADAA7 /* SecondViewController.swift */; };
@@ -27,6 +30,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3F4369BF1A844ABD0081C440 /* Concerts.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Concerts.xcdatamodel; sourceTree = "<group>"; };
+		3F4369C21A844CFB0081C440 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		3F7B91541A844597000ADAA7 /* Fandom.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Fandom.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F7B91581A844597000ADAA7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3F7B91591A844597000ADAA7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -45,6 +50,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3F4369C31A844CFB0081C440 /* CoreData.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,6 +67,7 @@
 		3F7B914B1A844596000ADAA7 = {
 			isa = PBXGroup;
 			children = (
+				3F4369C21A844CFB0081C440 /* CoreData.framework */,
 				3F7B91561A844597000ADAA7 /* Fandom */,
 				3F7B916E1A844598000ADAA7 /* FandomTests */,
 				3F7B91551A844597000ADAA7 /* Products */,
@@ -86,6 +93,7 @@
 				3F7B91621A844598000ADAA7 /* Images.xcassets */,
 				3F7B91641A844598000ADAA7 /* LaunchScreen.xib */,
 				3F7B91571A844597000ADAA7 /* Supporting Files */,
+				3F4369BE1A844ABD0081C440 /* Concerts.xcdatamodeld */,
 			);
 			path = Fandom;
 			sourceTree = "<group>";
@@ -217,6 +225,7 @@
 			files = (
 				3F7B915E1A844597000ADAA7 /* SecondViewController.swift in Sources */,
 				3F7B915A1A844597000ADAA7 /* AppDelegate.swift in Sources */,
+				3F4369C01A844ABD0081C440 /* Concerts.xcdatamodeld in Sources */,
 				3F7B915C1A844597000ADAA7 /* FirstViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -225,6 +234,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3F4369C11A844ABD0081C440 /* Concerts.xcdatamodeld in Sources */,
 				3F7B91721A844598000ADAA7 /* FandomTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -411,6 +421,7 @@
 				3F7B91771A844598000ADAA7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		3F7B91781A844598000ADAA7 /* Build configuration list for PBXNativeTarget "FandomTests" */ = {
 			isa = XCConfigurationList;
@@ -419,8 +430,22 @@
 				3F7B917A1A844598000ADAA7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		3F4369BE1A844ABD0081C440 /* Concerts.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				3F4369BF1A844ABD0081C440 /* Concerts.xcdatamodel */,
+			);
+			currentVersion = 3F4369BF1A844ABD0081C440 /* Concerts.xcdatamodel */;
+			path = Concerts.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 3F7B914C1A844596000ADAA7 /* Project object */;
 }
