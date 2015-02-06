@@ -115,12 +115,12 @@ class LASTFMManager: NSObject,CLLocationManagerDelegate{
             println(coord.longitude)
             //set mylocation to locationObj 's properties
             //call query
-            /*
-            var lat = mylocation!.coordinate.latitude.hashValue
-            var long = mylocation!.coordinate.longitude.hashValue
+           
+            var lat = coord.latitude
+            var long = coord.longitude
             var urlPath = url + "&lat=" + String(UInt8(lat)) + "&long=" + String(UInt8(long))
             sendAPICall(urlPath)
-            */
+            
             
         }
     }
