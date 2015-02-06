@@ -10,8 +10,10 @@
 		3F4369C01A844ABD0081C440 /* Concerts.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3F4369BE1A844ABD0081C440 /* Concerts.xcdatamodeld */; };
 		3F4369C11A844ABD0081C440 /* Concerts.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3F4369BE1A844ABD0081C440 /* Concerts.xcdatamodeld */; };
 		3F4369C31A844CFB0081C440 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F4369C21A844CFB0081C440 /* CoreData.framework */; };
+		3F4369C81A845F720081C440 /* NewConcertFormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F4369C71A845F720081C440 /* NewConcertFormViewController.swift */; };
+		3F4369C91A845F720081C440 /* NewConcertFormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F4369C71A845F720081C440 /* NewConcertFormViewController.swift */; };
 		3F7B915A1A844597000ADAA7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F7B91591A844597000ADAA7 /* AppDelegate.swift */; };
-		3F7B915C1A844597000ADAA7 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F7B915B1A844597000ADAA7 /* FirstViewController.swift */; };
+		3F7B915C1A844597000ADAA7 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F7B915B1A844597000ADAA7 /* HomeViewController.swift */; };
 		3F7B915E1A844597000ADAA7 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F7B915D1A844597000ADAA7 /* SecondViewController.swift */; };
 		3F7B91611A844598000ADAA7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F7B915F1A844598000ADAA7 /* Main.storyboard */; };
 		3F7B91631A844598000ADAA7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3F7B91621A844598000ADAA7 /* Images.xcassets */; };
@@ -32,10 +34,11 @@
 /* Begin PBXFileReference section */
 		3F4369BF1A844ABD0081C440 /* Concerts.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Concerts.xcdatamodel; sourceTree = "<group>"; };
 		3F4369C21A844CFB0081C440 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		3F4369C71A845F720081C440 /* NewConcertFormViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewConcertFormViewController.swift; sourceTree = "<group>"; };
 		3F7B91541A844597000ADAA7 /* Fandom.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Fandom.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F7B91581A844597000ADAA7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3F7B91591A844597000ADAA7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		3F7B915B1A844597000ADAA7 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
+		3F7B915B1A844597000ADAA7 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		3F7B915D1A844597000ADAA7 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		3F7B91601A844598000ADAA7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3F7B91621A844598000ADAA7 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
@@ -87,13 +90,14 @@
 			isa = PBXGroup;
 			children = (
 				3F7B91591A844597000ADAA7 /* AppDelegate.swift */,
-				3F7B915B1A844597000ADAA7 /* FirstViewController.swift */,
+				3F7B915B1A844597000ADAA7 /* HomeViewController.swift */,
 				3F7B915D1A844597000ADAA7 /* SecondViewController.swift */,
 				3F7B915F1A844598000ADAA7 /* Main.storyboard */,
 				3F7B91621A844598000ADAA7 /* Images.xcassets */,
 				3F7B91641A844598000ADAA7 /* LaunchScreen.xib */,
 				3F7B91571A844597000ADAA7 /* Supporting Files */,
 				3F4369BE1A844ABD0081C440 /* Concerts.xcdatamodeld */,
+				3F4369C71A845F720081C440 /* NewConcertFormViewController.swift */,
 			);
 			path = Fandom;
 			sourceTree = "<group>";
@@ -223,10 +227,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3F4369C81A845F720081C440 /* NewConcertFormViewController.swift in Sources */,
 				3F7B915E1A844597000ADAA7 /* SecondViewController.swift in Sources */,
 				3F7B915A1A844597000ADAA7 /* AppDelegate.swift in Sources */,
 				3F4369C01A844ABD0081C440 /* Concerts.xcdatamodeld in Sources */,
-				3F7B915C1A844597000ADAA7 /* FirstViewController.swift in Sources */,
+				3F7B915C1A844597000ADAA7 /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -234,6 +239,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3F4369C91A845F720081C440 /* NewConcertFormViewController.swift in Sources */,
 				3F4369C11A844ABD0081C440 /* Concerts.xcdatamodeld in Sources */,
 				3F7B91721A844598000ADAA7 /* FandomTests.swift in Sources */,
 			);
