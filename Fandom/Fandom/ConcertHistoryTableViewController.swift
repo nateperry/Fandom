@@ -71,7 +71,7 @@ class ConcertHistoryTableViewController: UITableViewController {
         
         NSLog("concert = %@", concert)
         
-        cell.textLabel.text = "Bands: " + concert.bands
+        cell.textLabel!.text = "Bands: " + concert.bands
         cell.detailTextLabel!.text = "Venue: " + concert.venue
         
 

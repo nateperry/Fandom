@@ -7,17 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-<<<<<<< HEAD
+
 		305689C01A8460260054EEC4 /* LastFMManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 305689BF1A8460260054EEC4 /* LastFMManager.swift */; };
 		305689C21A847BF60054EEC4 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 305689C11A847BF60054EEC4 /* CoreLocation.framework */; };
-=======
 		3F0322E71A85630F00BB75ED /* ConcertHistoryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F0322E61A85630F00BB75ED /* ConcertHistoryTableViewController.swift */; };
 		3F0322E91A85674000BB75ED /* Concert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F0322E81A85674000BB75ED /* Concert.swift */; };
 		3F4369C01A844ABD0081C440 /* Concerts.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3F4369BE1A844ABD0081C440 /* Concerts.xcdatamodeld */; };
 		3F4369C11A844ABD0081C440 /* Concerts.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3F4369BE1A844ABD0081C440 /* Concerts.xcdatamodeld */; };
 		3F4369C31A844CFB0081C440 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F4369C21A844CFB0081C440 /* CoreData.framework */; };
 		3F4369C81A845F720081C440 /* NewConcertFormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F4369C71A845F720081C440 /* NewConcertFormViewController.swift */; };
->>>>>>> master
+		
 		3F7B915A1A844597000ADAA7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F7B91591A844597000ADAA7 /* AppDelegate.swift */; };
 		3F7B915C1A844597000ADAA7 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F7B915B1A844597000ADAA7 /* HomeViewController.swift */; };
 		3F7B915E1A844597000ADAA7 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F7B915D1A844597000ADAA7 /* SecondViewController.swift */; };
@@ -38,16 +37,16 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-<<<<<<< HEAD
+
 		305689BF1A8460260054EEC4 /* LastFMManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LastFMManager.swift; sourceTree = "<group>"; };
 		305689C11A847BF60054EEC4 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
-=======
+
 		3F0322E61A85630F00BB75ED /* ConcertHistoryTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConcertHistoryTableViewController.swift; sourceTree = "<group>"; };
 		3F0322E81A85674000BB75ED /* Concert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Concert.swift; sourceTree = "<group>"; };
 		3F4369BF1A844ABD0081C440 /* Concerts.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Concerts.xcdatamodel; sourceTree = "<group>"; };
 		3F4369C21A844CFB0081C440 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		3F4369C71A845F720081C440 /* NewConcertFormViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewConcertFormViewController.swift; sourceTree = "<group>"; };
->>>>>>> master
+
 		3F7B91541A844597000ADAA7 /* Fandom.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Fandom.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F7B91581A844597000ADAA7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3F7B91591A844597000ADAA7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -66,11 +65,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-<<<<<<< HEAD
+
 				305689C21A847BF60054EEC4 /* CoreLocation.framework in Frameworks */,
-=======
+
 				3F4369C31A844CFB0081C440 /* CoreData.framework in Frameworks */,
->>>>>>> master
+
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -103,11 +102,11 @@
 		3F7B914B1A844596000ADAA7 = {
 			isa = PBXGroup;
 			children = (
-<<<<<<< HEAD
+
 				305689C11A847BF60054EEC4 /* CoreLocation.framework */,
-=======
+
 				3F4369C21A844CFB0081C440 /* CoreData.framework */,
->>>>>>> master
+
 				3F7B91561A844597000ADAA7 /* Fandom */,
 				3F7B916E1A844598000ADAA7 /* FandomTests */,
 				3F7B91551A844597000ADAA7 /* Products */,
@@ -267,11 +266,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-<<<<<<< HEAD
+
 				305689C01A8460260054EEC4 /* LastFMManager.swift in Sources */,
-=======
+
 				3F4369C81A845F720081C440 /* NewConcertFormViewController.swift in Sources */,
->>>>>>> master
+
 				3F7B915E1A844597000ADAA7 /* SecondViewController.swift in Sources */,
 				3F7B915A1A844597000ADAA7 /* AppDelegate.swift in Sources */,
 				3F4369C01A844ABD0081C440 /* Concerts.xcdatamodeld in Sources */,
