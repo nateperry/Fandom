@@ -66,9 +66,17 @@
 		305689BE1A845FFD0054EEC4 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				305689BF1A8460260054EEC4 /* LastFMManager.swift */,
+				30FB614A1A857034007562BF /* LASTFM */,
 			);
 			name = Model;
+			sourceTree = "<group>";
+		};
+		30FB614A1A857034007562BF /* LASTFM */ = {
+			isa = PBXGroup;
+			children = (
+				305689BF1A8460260054EEC4 /* LastFMManager.swift */,
+			);
+			name = LASTFM;
 			sourceTree = "<group>";
 		};
 		3F7B914B1A844596000ADAA7 = {

@@ -25,37 +25,16 @@ class LASTFMManager: NSObject,CLLocationManagerDelegate{
     func getConcerts(location:String? = nil){
         
         var urlPath:String
-        initLocationManager()
         //if a location is passed in, use that location
         //else use the user's current location
-        /*
-        if let unwrap_location = location {
+        let unwrap_location = location
+        if unwrap_location != nil {
             urlPath = url + "&location=" + location!
+            sendAPICall(urlPath)
         }
         else{
             initLocationManager()
-            var lat = mylocation!.coordinate.latitude.hashValue
-            var long = mylocation!.coordinate.longitude.hashValue
-            urlPath = url + "&lat=" + String(UInt8(lat)) + "&long=" + String(UInt8(long))
         }
-
-        
-        // create a session object
-        let session = NSURLSession(
-            configuration: NSURLSessionConfiguration.defaultSessionConfiguration())
-        
-        // make a network request for a URL, in this case our endpoint
-        session.dataTaskWithURL(NSURL(string: url)!,
-            completionHandler: { (data, response, error) -> Void in
-                
-                // create an NSArray with the JSON response data
-                var jsonReadError:NSError?
-                
-                println(NSString(data: data, encoding: NSUTF8StringEncoding))
-                //let jsonArray = NSJSONSerialization.JSONObjectWithData(data, options: nil, error: &jsonReadError) as [AnyObject]
-                
-        }).resume() 
-*/
     }
     
     //Send query to API
