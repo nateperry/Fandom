@@ -11,7 +11,6 @@
 		3F4369C11A844ABD0081C440 /* Concerts.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3F4369BE1A844ABD0081C440 /* Concerts.xcdatamodeld */; };
 		3F4369C31A844CFB0081C440 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F4369C21A844CFB0081C440 /* CoreData.framework */; };
 		3F4369C81A845F720081C440 /* NewConcertFormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F4369C71A845F720081C440 /* NewConcertFormViewController.swift */; };
-		3F4369C91A845F720081C440 /* NewConcertFormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F4369C71A845F720081C440 /* NewConcertFormViewController.swift */; };
 		3F7B915A1A844597000ADAA7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F7B91591A844597000ADAA7 /* AppDelegate.swift */; };
 		3F7B915C1A844597000ADAA7 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F7B915B1A844597000ADAA7 /* HomeViewController.swift */; };
 		3F7B915E1A844597000ADAA7 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F7B915D1A844597000ADAA7 /* SecondViewController.swift */; };
@@ -239,7 +238,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3F4369C91A845F720081C440 /* NewConcertFormViewController.swift in Sources */,
 				3F4369C11A844ABD0081C440 /* Concerts.xcdatamodeld in Sources */,
 				3F7B91721A844598000ADAA7 /* FandomTests.swift in Sources */,
 			);

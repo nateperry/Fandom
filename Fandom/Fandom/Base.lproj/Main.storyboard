@@ -77,7 +77,7 @@
                                     <outlet property="delegate" destination="W7l-au-6E1" id="0Qg-FA-eYh"/>
                                 </connections>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="VanueName" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="line" placeholder="Venue" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SET-U0-11c">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="VenueName" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="line" placeholder="Venue" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SET-U0-11c">
                                 <rect key="frame" x="16" y="172" width="568" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="tgQ-qK-n3n"/>
@@ -88,6 +88,17 @@
                                     <outlet property="delegate" destination="W7l-au-6E1" id="ulU-xy-rP8"/>
                                 </connections>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qGf-Hr-e3Z">
+                                <rect key="frame" x="230" y="264" width="140" height="72"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <state key="normal" title="Submit">
+                                    <color key="titleColor" red="0.9583474864" green="0.62387746799999999" blue="0.18846787079999999" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="onSubmitClick:" destination="W7l-au-6E1" eventType="touchUpInside" id="6yZ-vV-wUq"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>

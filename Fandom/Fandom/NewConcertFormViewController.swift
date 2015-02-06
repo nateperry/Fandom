@@ -7,24 +7,52 @@
 //
 
 import UIKit
+import CoreData
 
 class NewConcertFormViewController: UIViewController, UITextFieldDelegate {
     
     
     @IBOutlet weak var bandName: UITextField!
     @IBOutlet weak var venueName: UITextField!
-
+    
+    @IBAction func onSubmitClick(sender: UIButton) {
+        self.submitForm()
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Do any additional setup after loading the view.
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
+    func submitForm() {
+        var concerts = [NSManagedObject]()
+        
+        let appDelegate = UIApplication.sharedApplication().delegate as AppDelegate
+        
+        let managedContext = appDelegate.managedObjectContext!
+        
+        let entity =  NSEntityDescription.entityForName("Concert", inManagedObjectContext:managedContext)
+        
+        let concert = NSManagedObject(entity: entity!, insertIntoManagedObjectContext:managedContext)
+        
+        concert.setValue(self.bandName.text, forKey:"bands")
+        concert.setValue(self.venueName.text, forKey:"venue")
+        
+        var error: NSError?
+        if !managedContext.save(&error) {
+            println("Could not save \(error), \(error?.userInfo)")
+        }
+
+        concerts.append(concert)
+        
+        NSLog("submitted - band = %@,", self.bandName.text)
+    }
 
     /*
     // MARK: - Navigation
@@ -43,9 +71,11 @@ class NewConcertFormViewController: UIViewController, UITextFieldDelegate {
     }
     
     func textFieldShouldEndEditing(textField: UITextField!) -> Bool {  //delegate method
-        NSLog("should end")
+        NSLog("should end - %@", textField.restorationIdentifier!)
         
-        // if text field has id VenuaName, submit
+        /*if (textField.restorationIdentifier! == "BandName") {
+            // change focus to VenueName
+        }*/
         return true
     }
     
