@@ -68,6 +68,10 @@ class LASTFMManager: NSObject,CLLocationManagerDelegate{
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
         
         locationManager.requestAlwaysAuthorization()
+        if ( CLLocationManager.locationServicesEnabled())
+        {
+            locationManager.startUpdatingLocation()
+        }
     }
     
     // Location Manager Delegate stuff
@@ -90,14 +94,14 @@ class LASTFMManager: NSObject,CLLocationManagerDelegate{
             var locationObj = locationArray.lastObject as CLLocation
             var coord = locationObj.coordinate
             
-            println(coord.latitude)
+            println(coord.latitude.description)
             println(coord.longitude)
             //set mylocation to locationObj 's properties
             //call query
            
             var lat = coord.latitude
             var long = coord.longitude
-            var urlPath = url + "&lat=" + String(UInt8(lat)) + "&long=" + String(UInt8(long))
+            var urlPath = url + "&lat=" + lat.description + "&long=" + long.description
             sendAPICall(urlPath)
             
             
