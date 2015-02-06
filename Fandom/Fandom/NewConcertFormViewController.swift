@@ -50,26 +50,6 @@ class NewConcertFormViewController: UIViewController, UITextFieldDelegate {
         }
 
         concerts.append(concert)
-        
-        
-        // temp
-        
-        let fetchRequest = NSFetchRequest(entityName:"Concert")
-        
-        //3
-        
-        let fetchedResults =
-        managedContext.executeFetchRequest(fetchRequest,
-            error: &error) as [NSManagedObject]?
-        
-        if let results = fetchedResults {
-            concerts = results
-            NSLog("fetched results = %@", concerts)
-        } else {
-            println("Could not fetch \(error), \(error!.userInfo)")
-        }
-        
-        //NSLog("submitted - band = %@,", self.bandName.text)
     }
 
     /*

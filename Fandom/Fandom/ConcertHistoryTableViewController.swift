@@ -7,8 +7,32 @@
 //
 
 import UIKit
+import CoreData
+
 
 class ConcertHistoryTableViewController: UITableViewController {
+    
+    var concerts = [NSManagedObject]()
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        let appDelegate = UIApplication.sharedApplication().delegate as AppDelegate
+        
+        let managedContext = appDelegate.managedObjectContext!
+        
+        let fetchRequest = NSFetchRequest(entityName:"Concert")
+        
+        var error: NSError?
+        
+        let fetchedResults = managedContext.executeFetchRequest(fetchRequest, error: &error) as [NSManagedObject]?
+        
+        if let results = fetchedResults {
+            self.concerts = results
+        } else {
+            println("Could not fetch \(error), \(error!.userInfo)")
+        }
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,24 +54,29 @@ class ConcertHistoryTableViewController: UITableViewController {
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         // #warning Potentially incomplete method implementation.
         // Return the number of sections.
-        return 0
+        return self.concerts.count
     }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete method implementation.
         // Return the number of rows in the section.
-        return 0
+        return 1
     }
 
-    /*
-    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath) as UITableViewCell
 
-        // Configure the cell...
+    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCellWithIdentifier("ConcertCell", forIndexPath: indexPath) as UITableViewCell
+        
+        let concert = Concert(dataSet:concerts[indexPath.row])
+        
+        NSLog("concert = %@", concert)
+        
+        cell.textLabel.text = "Bands: " + concert.bands
+        cell.detailTextLabel!.text = "Venue: " + concert.venue
+        
 
         return cell
     }
-    */
 
     /*
     // Override to support conditional editing of the table view.
