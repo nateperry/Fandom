@@ -65,15 +65,14 @@ class ConcertHistoryTableViewController: UITableViewController {
 
 
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("ConcertCell", forIndexPath: indexPath) as UITableViewCell
+        let cell = tableView.dequeueReusableCellWithIdentifier("ConcertCell", forIndexPath: indexPath) as ConcertHistoryTableViewCell
         
         let concert = Concert(dataSet:concerts[indexPath.row])
         
-        NSLog("concert = %@", concert)
-        
-        cell.textLabel!.text = "Bands: " + concert.bands
-        cell.detailTextLabel!.text = "Venue: " + concert.venue
-        
+        cell.labelBandName.text = "Bands: " + concert.bands
+        cell.labelVenue.text = "Venue: " + concert.venue
+        cell.labelScore.text = "Score: " + String(concert.score)
+        cell.labelDate.text = "Date: " + concert.date
 
         return cell
     }
