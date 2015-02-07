@@ -9,8 +9,9 @@
 import Foundation
 import UIKit
 import AVFoundation
+import MobileCoreServices
 
-class CameraViewController: UIViewController{
+class CameraViewController: UIViewController,UINavigationControllerDelegate, UIImagePickerControllerDelegate {
     let captureSession = AVCaptureSession()
     
     //Event listener - Start Camera
@@ -26,32 +27,17 @@ class CameraViewController: UIViewController{
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-        captureSession.sessionPreset = AVCaptureSessionPresetLow
-        
-        let devices = AVCaptureDevice.devices()
-        
-        // Loop through all the capture devices on this phone
-        for device in devices {
-            // Make sure this particular device supports video
-            if (device.hasMediaType(AVMediaTypeVideo)) {
-                // Finally check the position and confirm we've got the back camera
-                if(device.position == AVCaptureDevicePosition.Back) {
-                    captureDevice = device as? AVCaptureDevice
-                    //println(devices)
-                }
-            }
-        }
-        
-        if captureDevice != nil {
-            beginSession()
-        }
+        // Do any additional setup after loading the view, typically from a nib
         
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
         
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+    }
+    
+    override func viewDidAppear(animated:Bool){
+        super.viewDidAppear(true);
     }
     
     override func didReceiveMemoryWarning() {
@@ -62,9 +48,23 @@ class CameraViewController: UIViewController{
     ///////////////////////////////////////////////////////////
     // MARK: - Camera
     ///////////////////////////////////////////////////////////
+    func takePicture() {
+        if (UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.Camera)){
+            var picker = UIImagePickerController()
+            picker.delegate = self
+            picker.sourceType = UIImagePickerControllerSourceType.Camera
+            picker.mediaTypes = [kUTTypeImage]
+            picker.allowsEditing = true
+            self.presentViewController(picker, animated: true, completion: nil)
+        }
+        else{
+            NSLog("No Camera.")
+        }
+    }
     
     func beginSession(){
         var err : NSError? = nil
+        configureDevice()
         captureSession.addInput(AVCaptureDeviceInput(device: captureDevice, error: &err))
         
         if err != nil {
@@ -76,5 +76,38 @@ class CameraViewController: UIViewController{
         previewLayer?.frame = self.view.layer.frame
         captureSession.startRunning()
     }
-
+    
+    func configureDevice() {
+        if let device = captureDevice {
+            device.lockForConfiguration(nil)
+            device.focusMode = .Locked
+            device.unlockForConfiguration()
+        }
+    }
+    
+    //COntrols the focus on the camera through setting a value.
+    func focusTo(value : Float) {
+        if let device = captureDevice {
+            if(device.lockForConfiguration(nil)) {
+                device.setFocusModeLockedWithLensPosition(value, completionHandler: { (time) -> Void in
+                    //
+                })
+                device.unlockForConfiguration()
+            }
+        }
+    }
+    
+    let screenWidth = UIScreen.mainScreen().bounds.size.width
+    
+    override func touchesBegan(touches: NSSet, withEvent event: UIEvent) {
+        var anyTouch = touches.anyObject() as UITouch
+        var touchPercent = anyTouch.locationInView(self.view).x / screenWidth
+        focusTo(Float(touchPercent))
+    }
+    
+    override func touchesMoved(touches: NSSet, withEvent event: UIEvent) {
+        var anyTouch = touches.anyObject() as UITouch
+        var touchPercent = anyTouch.locationInView(self.view).x / screenWidth
+        focusTo(Float(touchPercent))
+    }
 }

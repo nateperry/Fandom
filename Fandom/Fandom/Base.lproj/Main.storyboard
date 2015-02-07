@@ -154,7 +154,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="BBm-UE-SpV" kind="presentation" id="1Pd-yL-ZMm"/>
+                                    <action selector="takePicture:" destination="bIV-rm-4za" eventType="touchUpInside" id="2wC-pb-zlQ"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -184,10 +184,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h53-dz-s8O">
-                                <rect key="frame" x="36" y="28" width="58" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h53-dz-s8O">
+                                <rect key="frame" x="16" y="13" width="58" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="58" id="Bub-aW-HIQ"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="15"/>
-                                <state key="normal" title="Cancel">
+                                <state key="normal" title="Done">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -197,6 +200,11 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="h53-dz-s8O" firstAttribute="leading" secondItem="evX-gC-nmI" secondAttribute="leadingMargin" id="0TN-Af-9J6"/>
+                            <constraint firstItem="Tv5-p4-DjO" firstAttribute="top" secondItem="h53-dz-s8O" secondAttribute="bottom" constant="557" id="Wu8-wa-9RL"/>
+                            <constraint firstItem="h53-dz-s8O" firstAttribute="top" secondItem="evX-gC-nmI" secondAttribute="topMargin" constant="13" id="ogc-0C-XJn"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SeN-bZ-HfJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
