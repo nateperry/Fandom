@@ -13,6 +13,7 @@ class MotionDetection {
     var accelX = 0.0;
     var accelY = 0.0;
     var accelZ = 0.0;
+    var delta = 0.0;
     
     let motionManager = CMMotionManager();
     let queue = NSOperationQueue();
@@ -21,19 +22,18 @@ class MotionDetection {
     func movement() -> Void {
         if(motionManager.accelerometerAvailable){
             println("Accelerometer available.");
-            motionManager.accelerometerUpdateInterval = 1.0 / 20.0;
+            motionManager.accelerometerUpdateInterval = 1.5;
             motionManager.startAccelerometerUpdatesToQueue(queue){ (data, error) in
                 if((error) != nil){
                     println(error);
                 } else {
                     //total delta of accelerometer in all dirs
-                    self.accelX = self.accelX + data.acceleration.x;
-                    self.accelY = self.accelY + data.acceleration.y;
-                    self.accelZ = self.accelZ + data.acceleration.z;
-
-                    println("X: \(abs(self.accelX))");
-                    println("Y: \(abs(self.accelY))");
-                    println("Z: \(abs(self.accelZ))");
+                    self.accelX = data.acceleration.x;
+                    self.accelY = data.acceleration.y;
+                    self.accelZ = data.acceleration.z;
+                    
+                    self.delta = self.accelX + self.accelY + self.accelZ;
+                    println(abs(self.delta));
                 }
             }; //end of accelerometer updates to queue
         } else {

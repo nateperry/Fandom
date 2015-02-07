@@ -10,14 +10,12 @@ import UIKit
 import MobileCoreServices
 
 class ConcertViewController: UIViewController,UINavigationControllerDelegate, UIImagePickerControllerDelegate {
-     let motionData = MotionDetection();
+    let motiondData:MotionDetection = MotionDetection();
     
     override func viewWillAppear(animated: Bool) {
+        motiondData.movement();
+    }
     
-    //fix this
-    if(!motionData.motionManager.accelerometerActive){
-    	motionData.movement();
-            
     //MARK: - Camera Control
     @IBAction func takePicture(sender: AnyObject) {
         if (UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.Camera)){
