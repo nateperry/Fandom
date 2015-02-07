@@ -126,7 +126,7 @@
         <!--StatsView-->
         <scene sceneID="wv3-Mx-qII">
             <objects>
-                <viewController title="Current Concert" id="bIV-rm-4za" userLabel="StatsView" sceneMemberID="viewController">
+                <viewController title="Current Concert" id="bIV-rm-4za" userLabel="StatsView" customClass="ConcertViewController" customModule="Fandom" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jPu-Nf-k1l"/>
                         <viewControllerLayoutGuide type="bottom" id="weH-ae-tjg"/>
