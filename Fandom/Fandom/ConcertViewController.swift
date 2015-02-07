@@ -7,15 +7,29 @@
 //
 
 import UIKit
+import MobileCoreServices
 
-class ConcertViewController: UIViewController {
-
-    let motionData = MotionDetection();
+class ConcertViewController: UIViewController,UINavigationControllerDelegate, UIImagePickerControllerDelegate {
+     let motionData = MotionDetection();
     
     override func viewWillAppear(animated: Bool) {
-        //fix this
-        if(!motionData.motionManager.accelerometerActive){
-            motionData.movement();
+    
+    //fix this
+    if(!motionData.motionManager.accelerometerActive){
+    	motionData.movement();
+            
+    //MARK: - Camera Control
+    @IBAction func takePicture(sender: AnyObject) {
+        if (UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.Camera)){
+            var picker = UIImagePickerController()
+            picker.delegate = self
+            picker.sourceType = UIImagePickerControllerSourceType.Camera
+            picker.mediaTypes = [kUTTypeImage]
+            picker.allowsEditing = true
+            self.presentViewController(picker, animated: true, completion: nil)
+        }
+        else{
+            NSLog("No Camera.")
         }
     }
     

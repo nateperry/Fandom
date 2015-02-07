@@ -17,6 +17,7 @@ class ConcertHistoryTableViewController: UITableViewController {
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         
+        // fetch the data
         let appDelegate = UIApplication.sharedApplication().delegate as AppDelegate
         
         let managedContext = appDelegate.managedObjectContext!
@@ -36,12 +37,6 @@ class ConcertHistoryTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
     }
 
     override func didReceiveMemoryWarning() {
@@ -67,16 +62,14 @@ class ConcertHistoryTableViewController: UITableViewController {
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("ConcertCell", forIndexPath: indexPath) as ConcertHistoryTableViewCell
         
+        // get the concert object
         let concert = Concert(dataSet:concerts[indexPath.row])
         
+        // populate the cell
         cell.labelBandName.text = "Bands: " + concert.bands
         cell.labelVenue.text = "Venue: " + concert.venue
-        cell.labelScore.text = "Score: " + String(concert.score)
-        cell.labelDate.text = "Date: " + concert.date
-        
-        print(concert)
-        
-
+        cell.labelScore.text = String(concert.score)
+        cell.labelDate.text = concert.date
         return cell
     }
 

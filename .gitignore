@@ -19,3 +19,7 @@ DerivedData
 *.xcuserstate
 .DS_Store
 */.DS_Store
+
+Fandom/.DS_Store
+
+Fandom/Fandom/.DS_Store

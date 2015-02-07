@@ -44,16 +44,18 @@ class NewConcertFormViewController: UIViewController, UITextFieldDelegate {
         concert.setValue(self.bandName.text.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceCharacterSet()), forKey:"bands")
         concert.setValue(self.venueName.text.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceCharacterSet()), forKey:"venue")
         concert.setValue(NSDate(), forKey:"date")
+        concert.setValue(0, forKey:"score")
         
         var error: NSError?
         if !managedContext.save(&error) {
             println("Could not save \(error), \(error?.userInfo)")
+        } else {
+            // add the new concert
+            concerts.append(concert)
+            
+            // load the stats page
+            performSegueWithIdentifier("ShowStatsPage", sender: self)
         }
-
-        concerts.append(concert)
-        println(concerts)
-        
-        performSegueWithIdentifier("ShowStatsPage", sender: self)
     }
 
     /*
@@ -69,11 +71,11 @@ class NewConcertFormViewController: UIViewController, UITextFieldDelegate {
     // MARK: - UITextFieldDelegate
     
     func textFieldDidBeginEditing(textField: UITextField!) {    //delegate method
-        NSLog("began editing")
+        // NSLog("began editing")
     }
     
     func textFieldShouldEndEditing(textField: UITextField!) -> Bool {  //delegate method
-        NSLog("should end - %@", textField.restorationIdentifier!)
+       //  NSLog("should end - %@", textField.restorationIdentifier!)
         
         /*if (textField.restorationIdentifier! == "BandName") {
             // change focus to VenueName
