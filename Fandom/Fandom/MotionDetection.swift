@@ -10,10 +10,15 @@ import UIKit;
 import CoreMotion;
 
 class MotionDetection {
-    var motionManager = CMMotionManager();
-    var queue = NSOperationQueue();
+    var accelX = 0.0;
+    var accelY = 0.0;
+    var accelZ = 0.0;
     
-    func movement() {
+    let motionManager = CMMotionManager();
+    let queue = NSOperationQueue();
+    
+    //get accelerometer updates based on time interval
+    func movement() -> Void {
         if(motionManager.accelerometerAvailable){
             println("Accelerometer available.");
             motionManager.accelerometerUpdateInterval = 0.2;
@@ -21,13 +26,25 @@ class MotionDetection {
                 if((error) != nil){
                     println(error);
                 } else {
-                    println("X = \(data.acceleration.x)");
-                    println("Y = \(data.acceleration.y)");
-                    println("Z = \(data.acceleration.z)");
+                    self.accelX = data.acceleration.x;
+                    self.accelY = data.acceleration.y;
+                    self.accelZ = data.acceleration.z;
                 }
-            };
+            }; //end of accelerometer updates to queue
         } else {
             println("Accelerometer not available.");
         }
+    }
+    
+    func getAccelX() -> Double {
+        return accelX;
+    }
+    
+    func getAccelY() -> Double {
+        return accelY;
+    }
+    
+    func getAccelZ() -> Double {
+        return accelZ;
     }
 }
