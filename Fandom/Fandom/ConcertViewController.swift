@@ -10,10 +10,13 @@ import UIKit
 import MobileCoreServices
 
 class ConcertViewController: UIViewController,UINavigationControllerDelegate, UIImagePickerControllerDelegate {
-    let motiondData:MotionDetection = MotionDetection();
+    let motionData:MotionDetection = MotionDetection();
     
     override func viewWillAppear(animated: Bool) {
-        motiondData.movement();
+        //this stops accelerometer from running duplicates
+        if(!motionData.motionManager.accelerometerActive){
+            motionData.movement();
+        }
     }
     
     //MARK: - Camera Control
