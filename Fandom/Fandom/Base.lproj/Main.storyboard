@@ -21,7 +21,7 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="61a-8i-Y7P">
                                 <rect key="frame" x="181" y="29" width="238" height="154"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="238" id="2kg-es-8hC"/>
+                                    <constraint firstAttribute="width" constant="238" id="6aC-N0-dSw"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="32"/>
                                 <state key="normal" title="New Concert">
@@ -35,9 +35,9 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="4ug-Mw-9AY" firstAttribute="top" secondItem="61a-8i-Y7P" secondAttribute="bottom" constant="304" id="0dR-Wk-2la"/>
-                            <constraint firstItem="61a-8i-Y7P" firstAttribute="top" secondItem="Ia1-K6-d13" secondAttribute="bottom" constant="29" id="szL-ja-Avd"/>
-                            <constraint firstItem="61a-8i-Y7P" firstAttribute="centerX" secondItem="tsR-hK-woN" secondAttribute="centerX" id="y75-XD-DUt"/>
+                            <constraint firstItem="61a-8i-Y7P" firstAttribute="centerX" secondItem="tsR-hK-woN" secondAttribute="centerX" id="Vr5-I1-Ngo"/>
+                            <constraint firstItem="4ug-Mw-9AY" firstAttribute="top" secondItem="61a-8i-Y7P" secondAttribute="bottom" constant="304" id="YrA-nz-Al3"/>
+                            <constraint firstItem="61a-8i-Y7P" firstAttribute="top" secondItem="Ia1-K6-d13" secondAttribute="bottom" constant="29" id="byf-jC-APm"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="rLV-39-KSv"/>

@@ -20,10 +20,9 @@
 		3F7B91631A844598000ADAA7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3F7B91621A844598000ADAA7 /* Images.xcassets */; };
 		3F7B91661A844598000ADAA7 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3F7B91641A844598000ADAA7 /* LaunchScreen.xib */; };
 		3F7B91721A844598000ADAA7 /* FandomTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F7B91711A844598000ADAA7 /* FandomTests.swift */; };
-		3FF861331A85AFE900F6405C /* ConcertHistoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF861321A85AFE900F6405C /* ConcertHistoryTableViewCell.swift */; };
 		3FAF0CA91A85BD85009021CD /* ConcertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FAF0CA81A85BD85009021CD /* ConcertViewController.swift */; };
 		3FE2ECC41A85AC9200A40232 /* MotionDetection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE2ECC31A85AC9200A40232 /* MotionDetection.swift */; };
-
+		3FF861331A85AFE900F6405C /* ConcertHistoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF861321A85AFE900F6405C /* ConcertHistoryTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,9 +52,9 @@
 		3F7B916B1A844598000ADAA7 /* FandomTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FandomTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F7B91701A844598000ADAA7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3F7B91711A844598000ADAA7 /* FandomTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FandomTests.swift; sourceTree = "<group>"; };
-		3FF861321A85AFE900F6405C /* ConcertHistoryTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConcertHistoryTableViewCell.swift; sourceTree = "<group>"; };
 		3FAF0CA81A85BD85009021CD /* ConcertViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConcertViewController.swift; sourceTree = "<group>"; };
 		3FE2ECC31A85AC9200A40232 /* MotionDetection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MotionDetection.swift; sourceTree = "<group>"; };
+		3FF861321A85AFE900F6405C /* ConcertHistoryTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConcertHistoryTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -191,6 +190,7 @@
 				TargetAttributes = {
 					3F7B91531A844597000ADAA7 = {
 						CreatedOnToolsVersion = 6.1;
+						DevelopmentTeam = 2S3D8J8M3T;
 					};
 					3F7B916A1A844598000ADAA7 = {
 						CreatedOnToolsVersion = 6.1;

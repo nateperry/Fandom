@@ -21,30 +21,23 @@ class MotionDetection {
     func movement() -> Void {
         if(motionManager.accelerometerAvailable){
             println("Accelerometer available.");
-            motionManager.accelerometerUpdateInterval = 0.2;
+            motionManager.accelerometerUpdateInterval = 1.0 / 20.0;
             motionManager.startAccelerometerUpdatesToQueue(queue){ (data, error) in
                 if((error) != nil){
                     println(error);
                 } else {
-                    self.accelX = data.acceleration.x;
-                    self.accelY = data.acceleration.y;
-                    self.accelZ = data.acceleration.z;
+                    //total delta of accelerometer in all dirs
+                    self.accelX = self.accelX + data.acceleration.x;
+                    self.accelY = self.accelY + data.acceleration.y;
+                    self.accelZ = self.accelZ + data.acceleration.z;
+
+                    println("X: \(abs(self.accelX))");
+                    println("Y: \(abs(self.accelY))");
+                    println("Z: \(abs(self.accelZ))");
                 }
             }; //end of accelerometer updates to queue
         } else {
             println("Accelerometer not available.");
         }
-    }
-    
-    func getAccelX() -> Double {
-        return accelX;
-    }
-    
-    func getAccelY() -> Double {
-        return accelY;
-    }
-    
-    func getAccelZ() -> Double {
-        return accelZ;
     }
 }
