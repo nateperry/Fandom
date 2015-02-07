@@ -11,7 +11,7 @@ import UIKit
 class HomeViewController: UIViewController {
     
     @IBAction func selectNewConcert(sender: UIButton) {
-        NSLog("hello")
+        // load the form page
         self.performSegueWithIdentifier("ShowNewConcertForm", sender: self)
     }
     
