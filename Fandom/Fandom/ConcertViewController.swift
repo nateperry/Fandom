@@ -13,6 +13,7 @@ class ConcertViewController: UIViewController {
     let motionData = MotionDetection();
     
     override func viewWillAppear(animated: Bool) {
+        //fix this
         if(!motionData.motionManager.accelerometerActive){
             motionData.movement();
         }
