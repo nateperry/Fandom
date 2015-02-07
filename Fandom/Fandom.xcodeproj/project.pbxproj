@@ -20,8 +20,10 @@
 		3F7B91631A844598000ADAA7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3F7B91621A844598000ADAA7 /* Images.xcassets */; };
 		3F7B91661A844598000ADAA7 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3F7B91641A844598000ADAA7 /* LaunchScreen.xib */; };
 		3F7B91721A844598000ADAA7 /* FandomTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F7B91711A844598000ADAA7 /* FandomTests.swift */; };
+		3FF861331A85AFE900F6405C /* ConcertHistoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF861321A85AFE900F6405C /* ConcertHistoryTableViewCell.swift */; };
 		3FAF0CA91A85BD85009021CD /* ConcertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FAF0CA81A85BD85009021CD /* ConcertViewController.swift */; };
 		3FE2ECC41A85AC9200A40232 /* MotionDetection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE2ECC31A85AC9200A40232 /* MotionDetection.swift */; };
+
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +53,7 @@
 		3F7B916B1A844598000ADAA7 /* FandomTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FandomTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F7B91701A844598000ADAA7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3F7B91711A844598000ADAA7 /* FandomTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FandomTests.swift; sourceTree = "<group>"; };
+		3FF861321A85AFE900F6405C /* ConcertHistoryTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConcertHistoryTableViewCell.swift; sourceTree = "<group>"; };
 		3FAF0CA81A85BD85009021CD /* ConcertViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConcertViewController.swift; sourceTree = "<group>"; };
 		3FE2ECC31A85AC9200A40232 /* MotionDetection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MotionDetection.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -106,6 +109,7 @@
 				3F7B91571A844597000ADAA7 /* Supporting Files */,
 				3F4369BE1A844ABD0081C440 /* Concerts.xcdatamodeld */,
 				3F4369C71A845F720081C440 /* NewConcertFormViewController.swift */,
+				3FF861321A85AFE900F6405C /* ConcertHistoryTableViewCell.swift */,
 				3F0322E61A85630F00BB75ED /* ConcertHistoryTableViewController.swift */,
 				3F0322E81A85674000BB75ED /* Concert.swift */,
 				3FAF0CA81A85BD85009021CD /* ConcertViewController.swift */,
@@ -243,6 +247,7 @@
 				3F7B915A1A844597000ADAA7 /* AppDelegate.swift in Sources */,
 				3F4369C01A844ABD0081C440 /* Concerts.xcdatamodeld in Sources */,
 				3F7B915C1A844597000ADAA7 /* HomeViewController.swift in Sources */,
+				3FF861331A85AFE900F6405C /* ConcertHistoryTableViewCell.swift in Sources */,
 				3FE2ECC41A85AC9200A40232 /* MotionDetection.swift in Sources */,
 				3F0322E91A85674000BB75ED /* Concert.swift in Sources */,
 				3F0322E71A85630F00BB75ED /* ConcertHistoryTableViewController.swift in Sources */,
