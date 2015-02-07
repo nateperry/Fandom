@@ -41,8 +41,9 @@ class NewConcertFormViewController: UIViewController, UITextFieldDelegate {
         
         let concert = NSManagedObject(entity: entity!, insertIntoManagedObjectContext:managedContext)
         
-        concert.setValue(self.bandName.text, forKey:"bands")
-        concert.setValue(self.venueName.text, forKey:"venue")
+        concert.setValue(self.bandName.text.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceCharacterSet()), forKey:"bands")
+        concert.setValue(self.venueName.text.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceCharacterSet()), forKey:"venue")
+        concert.setValue(NSDate(), forKey:"date")
         
         var error: NSError?
         if !managedContext.save(&error) {
@@ -50,6 +51,9 @@ class NewConcertFormViewController: UIViewController, UITextFieldDelegate {
         }
 
         concerts.append(concert)
+        println(concerts)
+        
+        performSegueWithIdentifier("ShowStatsPage", sender: self)
     }
 
     /*
