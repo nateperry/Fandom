@@ -16,6 +16,7 @@
 		3F1696071A87207600180F86 /* fandom_launch_bg_1536x2048.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F1696041A87207600180F86 /* fandom_launch_bg_1536x2048.png */; };
 		3F1696081A87207600180F86 /* fandom_logotype_orange.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F1696051A87207600180F86 /* fandom_logotype_orange.png */; };
 		3F1696091A87207600180F86 /* fandom_logotype_white.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F1696061A87207600180F86 /* fandom_logotype_white.png */; };
+		3F1D99E71A87DBFD00AB3E7E /* ConcertReviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F1D99E61A87DBFD00AB3E7E /* ConcertReviewViewController.swift */; };
 		3F4369C01A844ABD0081C440 /* Concerts.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3F4369BE1A844ABD0081C440 /* Concerts.xcdatamodeld */; };
 		3F4369C11A844ABD0081C440 /* Concerts.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3F4369BE1A844ABD0081C440 /* Concerts.xcdatamodeld */; };
 		3F4369C31A844CFB0081C440 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F4369C21A844CFB0081C440 /* CoreData.framework */; };
@@ -57,6 +58,7 @@
 		3F1696041A87207600180F86 /* fandom_launch_bg_1536x2048.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fandom_launch_bg_1536x2048.png; sourceTree = "<group>"; };
 		3F1696051A87207600180F86 /* fandom_logotype_orange.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fandom_logotype_orange.png; sourceTree = "<group>"; };
 		3F1696061A87207600180F86 /* fandom_logotype_white.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fandom_logotype_white.png; sourceTree = "<group>"; };
+		3F1D99E61A87DBFD00AB3E7E /* ConcertReviewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConcertReviewViewController.swift; sourceTree = "<group>"; };
 		3F4369BF1A844ABD0081C440 /* Concerts.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Concerts.xcdatamodel; sourceTree = "<group>"; };
 		3F4369C21A844CFB0081C440 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		3F4369C71A845F720081C440 /* NewConcertFormViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewConcertFormViewController.swift; sourceTree = "<group>"; };
@@ -160,6 +162,7 @@
 				3FAF0CA81A85BD85009021CD /* ConcertViewController.swift */,
 				3051F74B1A86C41E006EB512 /* PictureViewController.swift */,
 				3FBF256D1A86DBD500441937 /* ConcertActivity.storyboard */,
+				3F1D99E61A87DBFD00AB3E7E /* ConcertReviewViewController.swift */,
 			);
 			path = Fandom;
 			sourceTree = "<group>";
@@ -256,6 +259,7 @@
 					};
 					3F7B916A1A844598000ADAA7 = {
 						CreatedOnToolsVersion = 6.1;
+						DevelopmentTeam = 2S3D8J8M3T;
 						TestTargetID = 3F7B91531A844597000ADAA7;
 					};
 				};
@@ -321,6 +325,7 @@
 				3F7B915C1A844597000ADAA7 /* HomeViewController.swift in Sources */,
 				3FF861331A85AFE900F6405C /* ConcertHistoryTableViewCell.swift in Sources */,
 				3FE2ECC41A85AC9200A40232 /* MotionDetection.swift in Sources */,
+				3F1D99E71A87DBFD00AB3E7E /* ConcertReviewViewController.swift in Sources */,
 				3F0322E91A85674000BB75ED /* Concert.swift in Sources */,
 				3F0322E71A85630F00BB75ED /* ConcertHistoryTableViewController.swift in Sources */,
 				3FAF0CA91A85BD85009021CD /* ConcertViewController.swift in Sources */,
@@ -450,9 +455,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = Fandom/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -461,9 +468,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = Fandom/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
@@ -471,6 +480,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -482,6 +493,7 @@
 				INFOPLIST_FILE = FandomTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Fandom.app/Fandom";
 			};
 			name = Debug;
@@ -490,6 +502,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -497,6 +511,7 @@
 				INFOPLIST_FILE = FandomTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Fandom.app/Fandom";
 			};
 			name = Release;
