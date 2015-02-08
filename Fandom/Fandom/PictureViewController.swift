@@ -8,8 +8,12 @@
 
 import Foundation
 import UIKit
+import CoreImage
 
 class PictureViewController: UIViewController,UIImagePickerControllerDelegate{
+    
+    @IBOutlet weak var picture: UIImageView!
+    var captureImg:UIImage?
     
     //Event listener - Start Camera
     @IBAction func cancelCamera(sender: AnyObject) {
@@ -18,5 +22,14 @@ class PictureViewController: UIViewController,UIImagePickerControllerDelegate{
         })
     }
     
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+        NSLog("Recieved Data");
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        picture.image = captureImg
+    }
     
 }
