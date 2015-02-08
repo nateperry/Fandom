@@ -7,9 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3051F74C1A86C41E006EB512 /* PictureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3051F74B1A86C41E006EB512 /* PictureViewController.swift */; };
 		305689C01A8460260054EEC4 /* LastFMManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 305689BF1A8460260054EEC4 /* LastFMManager.swift */; };
 		305689C21A847BF60054EEC4 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 305689C11A847BF60054EEC4 /* CoreLocation.framework */; };
-		30DCD27E1A85D3730010C969 /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30DCD27D1A85D3730010C969 /* CameraViewController.swift */; };
 		3F0322E71A85630F00BB75ED /* ConcertHistoryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F0322E61A85630F00BB75ED /* ConcertHistoryTableViewController.swift */; };
 		3F0322E91A85674000BB75ED /* Concert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F0322E81A85674000BB75ED /* Concert.swift */; };
 		3F4369C01A844ABD0081C440 /* Concerts.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3F4369BE1A844ABD0081C440 /* Concerts.xcdatamodeld */; };
@@ -19,12 +19,16 @@
 		3F46DF3C1A86CE2C00976783 /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F46DF3B1A86CE2C00976783 /* CoreMotion.framework */; };
 		3F7B915A1A844597000ADAA7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F7B91591A844597000ADAA7 /* AppDelegate.swift */; };
 		3F7B915C1A844597000ADAA7 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F7B915B1A844597000ADAA7 /* HomeViewController.swift */; };
-		3F7B915E1A844597000ADAA7 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F7B915D1A844597000ADAA7 /* SecondViewController.swift */; };
+		3F7B915E1A844597000ADAA7 /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F7B915D1A844597000ADAA7 /* AboutViewController.swift */; };
 		3F7B91611A844598000ADAA7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F7B915F1A844598000ADAA7 /* Main.storyboard */; };
 		3F7B91631A844598000ADAA7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3F7B91621A844598000ADAA7 /* Images.xcassets */; };
 		3F7B91661A844598000ADAA7 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3F7B91641A844598000ADAA7 /* LaunchScreen.xib */; };
 		3F7B91721A844598000ADAA7 /* FandomTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F7B91711A844598000ADAA7 /* FandomTests.swift */; };
 		3FAF0CA91A85BD85009021CD /* ConcertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FAF0CA81A85BD85009021CD /* ConcertViewController.swift */; };
+		3FBF256A1A86C50300441937 /* danny_nguyen.png in Resources */ = {isa = PBXBuildFile; fileRef = 3FBF25671A86C50300441937 /* danny_nguyen.png */; };
+		3FBF256B1A86C50300441937 /* nate_kierpiec.png in Resources */ = {isa = PBXBuildFile; fileRef = 3FBF25681A86C50300441937 /* nate_kierpiec.png */; };
+		3FBF256C1A86C50300441937 /* nate_perry.png in Resources */ = {isa = PBXBuildFile; fileRef = 3FBF25691A86C50300441937 /* nate_perry.png */; };
+		3FBF256E1A86DBD500441937 /* ConcertActivity.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3FBF256D1A86DBD500441937 /* ConcertActivity.storyboard */; };
 		3FE2ECC41A85AC9200A40232 /* MotionDetection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE2ECC31A85AC9200A40232 /* MotionDetection.swift */; };
 		3FF861331A85AFE900F6405C /* ConcertHistoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF861321A85AFE900F6405C /* ConcertHistoryTableViewCell.swift */; };
 /* End PBXBuildFile section */
@@ -40,9 +44,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3051F74B1A86C41E006EB512 /* PictureViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PictureViewController.swift; sourceTree = "<group>"; };
 		305689BF1A8460260054EEC4 /* LastFMManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LastFMManager.swift; sourceTree = "<group>"; };
 		305689C11A847BF60054EEC4 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
-		30DCD27D1A85D3730010C969 /* CameraViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
 		3F0322E61A85630F00BB75ED /* ConcertHistoryTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConcertHistoryTableViewController.swift; sourceTree = "<group>"; };
 		3F0322E81A85674000BB75ED /* Concert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Concert.swift; sourceTree = "<group>"; };
 		3F4369BF1A844ABD0081C440 /* Concerts.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Concerts.xcdatamodel; sourceTree = "<group>"; };
@@ -53,7 +57,7 @@
 		3F7B91581A844597000ADAA7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3F7B91591A844597000ADAA7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3F7B915B1A844597000ADAA7 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
-		3F7B915D1A844597000ADAA7 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		3F7B915D1A844597000ADAA7 /* AboutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
 		3F7B91601A844598000ADAA7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3F7B91621A844598000ADAA7 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		3F7B91651A844598000ADAA7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -61,6 +65,10 @@
 		3F7B91701A844598000ADAA7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3F7B91711A844598000ADAA7 /* FandomTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FandomTests.swift; sourceTree = "<group>"; };
 		3FAF0CA81A85BD85009021CD /* ConcertViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConcertViewController.swift; sourceTree = "<group>"; };
+		3FBF25671A86C50300441937 /* danny_nguyen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = danny_nguyen.png; sourceTree = "<group>"; };
+		3FBF25681A86C50300441937 /* nate_kierpiec.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = nate_kierpiec.png; sourceTree = "<group>"; };
+		3FBF25691A86C50300441937 /* nate_perry.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = nate_perry.png; sourceTree = "<group>"; };
+		3FBF256D1A86DBD500441937 /* ConcertActivity.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ConcertActivity.storyboard; sourceTree = "<group>"; };
 		3FE2ECC31A85AC9200A40232 /* MotionDetection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MotionDetection.swift; sourceTree = "<group>"; };
 		3FF861321A85AFE900F6405C /* ConcertHistoryTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConcertHistoryTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -126,10 +134,11 @@
 		3F7B91561A844597000ADAA7 /* Fandom */ = {
 			isa = PBXGroup;
 			children = (
+				3FBF25661A86C4ED00441937 /* Images */,
 				305689BE1A845FFD0054EEC4 /* Model */,
 				3F7B91591A844597000ADAA7 /* AppDelegate.swift */,
 				3F7B915B1A844597000ADAA7 /* HomeViewController.swift */,
-				3F7B915D1A844597000ADAA7 /* SecondViewController.swift */,
+				3F7B915D1A844597000ADAA7 /* AboutViewController.swift */,
 				3F7B915F1A844598000ADAA7 /* Main.storyboard */,
 				3FE2ECC31A85AC9200A40232 /* MotionDetection.swift */,
 				3F7B91621A844598000ADAA7 /* Images.xcassets */,
@@ -141,7 +150,9 @@
 				3F0322E61A85630F00BB75ED /* ConcertHistoryTableViewController.swift */,
 				3F0322E81A85674000BB75ED /* Concert.swift */,
 				3FAF0CA81A85BD85009021CD /* ConcertViewController.swift */,
+				3051F74B1A86C41E006EB512 /* PictureViewController.swift */,
 				30DCD27D1A85D3730010C969 /* CameraViewController.swift */,
+				3FBF256D1A86DBD500441937 /* ConcertActivity.storyboard */,
 			);
 			path = Fandom;
 			sourceTree = "<group>";
@@ -169,6 +180,16 @@
 				3F7B91701A844598000ADAA7 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		3FBF25661A86C4ED00441937 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				3FBF25671A86C50300441937 /* danny_nguyen.png */,
+				3FBF25681A86C50300441937 /* nate_kierpiec.png */,
+				3FBF25691A86C50300441937 /* nate_perry.png */,
+			);
+			name = Images;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -252,9 +273,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3FBF256C1A86C50300441937 /* nate_perry.png in Resources */,
 				3F7B91611A844598000ADAA7 /* Main.storyboard in Resources */,
 				3F7B91661A844598000ADAA7 /* LaunchScreen.xib in Resources */,
+				3FBF256B1A86C50300441937 /* nate_kierpiec.png in Resources */,
+				3FBF256A1A86C50300441937 /* danny_nguyen.png in Resources */,
 				3F7B91631A844598000ADAA7 /* Images.xcassets in Resources */,
+				3FBF256E1A86DBD500441937 /* ConcertActivity.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -273,11 +298,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				305689C01A8460260054EEC4 /* LastFMManager.swift in Sources */,
+				3051F74C1A86C41E006EB512 /* PictureViewController.swift in Sources */,
 				3F4369C81A845F720081C440 /* NewConcertFormViewController.swift in Sources */,
-				3F7B915E1A844597000ADAA7 /* SecondViewController.swift in Sources */,
+				3F7B915E1A844597000ADAA7 /* AboutViewController.swift in Sources */,
 				3F7B915A1A844597000ADAA7 /* AppDelegate.swift in Sources */,
 				3F4369C01A844ABD0081C440 /* Concerts.xcdatamodeld in Sources */,
-				30DCD27E1A85D3730010C969 /* CameraViewController.swift in Sources */,
 				3F7B915C1A844597000ADAA7 /* HomeViewController.swift in Sources */,
 				3FF861331A85AFE900F6405C /* ConcertHistoryTableViewCell.swift in Sources */,
 				3FE2ECC41A85AC9200A40232 /* MotionDetection.swift in Sources */,

@@ -8,6 +8,7 @@
 
 import UIKit
 import MobileCoreServices
+import AssetsLibrary
 
 class ConcertViewController: UIViewController,UINavigationControllerDelegate, UIImagePickerControllerDelegate {
     let motionData:MotionDetection = MotionDetection();
@@ -19,20 +20,24 @@ class ConcertViewController: UIViewController,UINavigationControllerDelegate, UI
         }
     }
     
-    //MARK: - Camera Control
+    /*
+    // MARK: - Access Camera
+    */
     @IBAction func takePicture(sender: AnyObject) {
         if (UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.Camera)){
             var picker = UIImagePickerController()
             picker.delegate = self
             picker.sourceType = UIImagePickerControllerSourceType.Camera
             picker.mediaTypes = [kUTTypeImage]
-            picker.allowsEditing = true
+            picker.allowsEditing = false
+            picker.modalTransitionStyle = UIModalTransitionStyle.CrossDissolve
             self.presentViewController(picker, animated: true, completion: nil)
         }
         else{
             NSLog("No Camera.")
         }
     }
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -54,5 +59,35 @@ class ConcertViewController: UIViewController,UINavigationControllerDelegate, UI
         // Pass the selected object to the new view controller.
     }
     */
+    
+    
+    /*
+    // MARK: - Camera Delegate Methods
+    */
+    func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: NSDictionary!) {
+        NSLog("Received image from camera")
+        let mediaType = info[UIImagePickerControllerMediaType] as String
+        var originalImage:UIImage?, editedImage:UIImage?, imageToSave:UIImage?
+        let compResult:CFComparisonResult = CFStringCompare(mediaType as NSString!, kUTTypeImage, CFStringCompareFlags.CompareCaseInsensitive)
+        if ( compResult == CFComparisonResult.CompareEqualTo ) {
+            
+            originalImage = info[UIImagePickerControllerOriginalImage] as UIImage?
+
+            imageToSave = originalImage
+            //imgView.image = imageToSave
+            //imgView.reloadInputViews()
+        }
+        
+        //Send image to PictureView to take care of adding points
+        var pictureView = self.storyboard?.instantiateViewControllerWithIdentifier("PictureView") as PictureViewController
+        pictureView.modalTransitionStyle = UIModalTransitionStyle.CrossDissolve
+        picker.dismissViewControllerAnimated(true, completion: nil)
+        self.presentViewController(pictureView, animated: true, completion: nil)
+        
+    }
+    
+    func imagePickerControllerDidCancel(picker: UIImagePickerController) {
+        picker.dismissViewControllerAnimated(true, completion: nil)
+    }
 
 }
