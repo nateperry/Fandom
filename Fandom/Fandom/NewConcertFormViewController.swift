@@ -54,7 +54,11 @@ class NewConcertFormViewController: UIViewController, UITextFieldDelegate {
             concerts.append(concert)
             
             // load the stats page
-            performSegueWithIdentifier("ShowStatsPage", sender: self)
+            //performSegueWithIdentifier("ShowStatsPage", sender: self)
+            var storyboard = UIStoryboard(name: "ConcertActivity", bundle: nil)
+            var controller = storyboard.instantiateViewControllerWithIdentifier("ConcertView") as ConcertViewController
+            
+            self.presentViewController(controller, animated: true, completion: nil)
         }
     }
 
