@@ -12,6 +12,10 @@
 		305689C21A847BF60054EEC4 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 305689C11A847BF60054EEC4 /* CoreLocation.framework */; };
 		3F0322E71A85630F00BB75ED /* ConcertHistoryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F0322E61A85630F00BB75ED /* ConcertHistoryTableViewController.swift */; };
 		3F0322E91A85674000BB75ED /* Concert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F0322E81A85674000BB75ED /* Concert.swift */; };
+		3F1696031A871A9E00180F86 /* fandom_launch_1536x2048.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F1696021A871A9E00180F86 /* fandom_launch_1536x2048.png */; };
+		3F1696071A87207600180F86 /* fandom_launch_bg_1536x2048.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F1696041A87207600180F86 /* fandom_launch_bg_1536x2048.png */; };
+		3F1696081A87207600180F86 /* fandom_logotype_orange.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F1696051A87207600180F86 /* fandom_logotype_orange.png */; };
+		3F1696091A87207600180F86 /* fandom_logotype_white.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F1696061A87207600180F86 /* fandom_logotype_white.png */; };
 		3F4369C01A844ABD0081C440 /* Concerts.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3F4369BE1A844ABD0081C440 /* Concerts.xcdatamodeld */; };
 		3F4369C11A844ABD0081C440 /* Concerts.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3F4369BE1A844ABD0081C440 /* Concerts.xcdatamodeld */; };
 		3F4369C31A844CFB0081C440 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F4369C21A844CFB0081C440 /* CoreData.framework */; };
@@ -49,6 +53,10 @@
 		305689C11A847BF60054EEC4 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		3F0322E61A85630F00BB75ED /* ConcertHistoryTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConcertHistoryTableViewController.swift; sourceTree = "<group>"; };
 		3F0322E81A85674000BB75ED /* Concert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Concert.swift; sourceTree = "<group>"; };
+		3F1696021A871A9E00180F86 /* fandom_launch_1536x2048.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fandom_launch_1536x2048.png; sourceTree = "<group>"; };
+		3F1696041A87207600180F86 /* fandom_launch_bg_1536x2048.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fandom_launch_bg_1536x2048.png; sourceTree = "<group>"; };
+		3F1696051A87207600180F86 /* fandom_logotype_orange.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fandom_logotype_orange.png; sourceTree = "<group>"; };
+		3F1696061A87207600180F86 /* fandom_logotype_white.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fandom_logotype_white.png; sourceTree = "<group>"; };
 		3F4369BF1A844ABD0081C440 /* Concerts.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Concerts.xcdatamodel; sourceTree = "<group>"; };
 		3F4369C21A844CFB0081C440 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		3F4369C71A845F720081C440 /* NewConcertFormViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewConcertFormViewController.swift; sourceTree = "<group>"; };
@@ -151,7 +159,6 @@
 				3F0322E81A85674000BB75ED /* Concert.swift */,
 				3FAF0CA81A85BD85009021CD /* ConcertViewController.swift */,
 				3051F74B1A86C41E006EB512 /* PictureViewController.swift */,
-				30DCD27D1A85D3730010C969 /* CameraViewController.swift */,
 				3FBF256D1A86DBD500441937 /* ConcertActivity.storyboard */,
 			);
 			path = Fandom;
@@ -185,6 +192,10 @@
 		3FBF25661A86C4ED00441937 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				3F1696041A87207600180F86 /* fandom_launch_bg_1536x2048.png */,
+				3F1696051A87207600180F86 /* fandom_logotype_orange.png */,
+				3F1696061A87207600180F86 /* fandom_logotype_white.png */,
+				3F1696021A871A9E00180F86 /* fandom_launch_1536x2048.png */,
 				3FBF25671A86C50300441937 /* danny_nguyen.png */,
 				3FBF25681A86C50300441937 /* nate_kierpiec.png */,
 				3FBF25691A86C50300441937 /* nate_perry.png */,
@@ -274,10 +285,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				3FBF256C1A86C50300441937 /* nate_perry.png in Resources */,
+				3F1696081A87207600180F86 /* fandom_logotype_orange.png in Resources */,
+				3F1696031A871A9E00180F86 /* fandom_launch_1536x2048.png in Resources */,
+				3F1696091A87207600180F86 /* fandom_logotype_white.png in Resources */,
 				3F7B91611A844598000ADAA7 /* Main.storyboard in Resources */,
 				3F7B91661A844598000ADAA7 /* LaunchScreen.xib in Resources */,
 				3FBF256B1A86C50300441937 /* nate_kierpiec.png in Resources */,
 				3FBF256A1A86C50300441937 /* danny_nguyen.png in Resources */,
+				3F1696071A87207600180F86 /* fandom_launch_bg_1536x2048.png in Resources */,
 				3F7B91631A844598000ADAA7 /* Images.xcassets in Resources */,
 				3FBF256E1A86DBD500441937 /* ConcertActivity.storyboard in Resources */,
 			);
@@ -434,6 +449,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = Fandom/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -444,6 +460,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = Fandom/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
