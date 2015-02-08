@@ -15,7 +15,7 @@ class ConcertViewController: UIViewController,UINavigationControllerDelegate, UI
     
     //Motion detector
     let motionData:MotionDetection = MotionDetection();
-    
+
     //Pictures
     var assetCollection: PHAssetCollection!
     var albumFound : Bool = false
@@ -23,6 +23,31 @@ class ConcertViewController: UIViewController,UINavigationControllerDelegate, UI
     var assetThumbnailSize:CGSize!
     var collection: PHAssetCollection!
     var assetCollectionPlaceholder: PHObjectPlaceholder!
+
+    @IBOutlet weak var labelScore: UILabel!
+    
+    @IBOutlet weak var buttonStartMotion: UIButton!
+    @IBOutlet weak var buttonStopMotion: UIButton!
+    
+    @IBAction func toggleStartMotion(sender: AnyObject) {
+        //start - IFF the accelerometer is not running
+        if(buttonStartMotion.titleLabel?.text == "Start") {
+            if(!motionData.motionManager.accelerometerActive) {
+                motionData.movement();
+            }
+            buttonStartMotion.setTitle("Pause", forState: UIControlState.Normal);
+        } else {
+            motionData.motionManager.stopAccelerometerUpdates();
+            buttonStartMotion.setTitle("Start", forState: UIControlState.Normal);
+        }
+    }
+    
+    @IBAction func toggleStopMotion(sender: AnyObject) {
+        motionData.motionManager.stopAccelerometerUpdates();
+        
+        buttonStartMotion.userInteractionEnabled = false;
+        buttonStartMotion.alpha = 0.4;
+    }
     
     /*
     // MARK: - Event Listeners
