@@ -19,7 +19,7 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FTE-dX-9tL">
                                 <rect key="frame" x="271" y="491" width="58" height="30"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="58" id="Gxg-aK-5Ko"/>
+                                    <constraint firstAttribute="width" constant="58" id="eLt-cm-Ndn"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="15"/>
                                 <state key="normal" title="Done">
@@ -33,9 +33,9 @@
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="FTE-dX-9tL" firstAttribute="centerX" secondItem="Ss8-E7-x1D" secondAttribute="centerX" id="VXf-Y3-o36"/>
-                            <constraint firstItem="xY8-th-xiD" firstAttribute="top" secondItem="FTE-dX-9tL" secondAttribute="bottom" constant="79" id="eJC-tp-OBA"/>
-                            <constraint firstItem="FTE-dX-9tL" firstAttribute="top" secondItem="EeO-QV-J4O" secondAttribute="bottom" constant="471" id="llT-ze-E15"/>
+                            <constraint firstItem="xY8-th-xiD" firstAttribute="top" secondItem="FTE-dX-9tL" secondAttribute="bottom" constant="79" id="523-nw-Uhy"/>
+                            <constraint firstItem="FTE-dX-9tL" firstAttribute="top" secondItem="EeO-QV-J4O" secondAttribute="bottom" constant="471" id="eFk-SY-xqX"/>
+                            <constraint firstItem="FTE-dX-9tL" firstAttribute="centerX" secondItem="Ss8-E7-x1D" secondAttribute="centerX" id="s9u-x6-dje"/>
                         </constraints>
                     </view>
                 </viewController>

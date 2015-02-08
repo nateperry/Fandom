@@ -69,9 +69,9 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="BandName" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="line" placeholder="Band Name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wSj-ZK-AoC">
-                                <rect key="frame" x="16" y="187" width="568" height="30"/>
+                                <rect key="frame" x="16" y="120" width="568" height="60"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="sDt-Rs-6Cq"/>
+                                    <constraint firstAttribute="height" constant="60" id="7pp-lr-BmA"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="words" autocorrectionType="no" returnKeyType="next"/>
@@ -80,9 +80,9 @@
                                 </connections>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="VenueName" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="line" placeholder="Venue" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SET-U0-11c">
-                                <rect key="frame" x="16" y="225" width="568" height="30"/>
+                                <rect key="frame" x="16" y="210" width="568" height="60"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="t82-6P-5gD"/>
+                                    <constraint firstAttribute="height" constant="60" id="E72-Tm-puO"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="words" returnKeyType="done"/>
@@ -91,10 +91,7 @@
                                 </connections>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qGf-Hr-e3Z">
-                                <rect key="frame" x="230" y="317" width="140" height="72"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="140" id="016-7h-uU3"/>
-                                </constraints>
+                                <rect key="frame" x="263" y="300" width="75" height="41"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <state key="normal" title="Submit">
                                     <color key="titleColor" red="0.9583474864" green="0.62387746799999999" blue="0.18846787079999999" alpha="1" colorSpace="calibratedRGB"/>
@@ -107,15 +104,14 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="wy2-7K-snO" firstAttribute="top" secondItem="qGf-Hr-e3Z" secondAttribute="bottom" constant="98" id="4AG-OX-IdW"/>
-                            <constraint firstItem="wSj-ZK-AoC" firstAttribute="leading" secondItem="SET-U0-11c" secondAttribute="leading" id="79v-CG-Evd"/>
-                            <constraint firstItem="wSj-ZK-AoC" firstAttribute="top" secondItem="4gG-Lr-IlX" secondAttribute="bottom" constant="187" id="N4f-G7-U4a"/>
-                            <constraint firstItem="SET-U0-11c" firstAttribute="centerX" secondItem="qGf-Hr-e3Z" secondAttribute="centerX" id="NWw-RO-F33"/>
-                            <constraint firstItem="wSj-ZK-AoC" firstAttribute="leading" secondItem="U20-Gh-4Xd" secondAttribute="leadingMargin" id="QZA-9w-E27"/>
-                            <constraint firstItem="qGf-Hr-e3Z" firstAttribute="top" secondItem="SET-U0-11c" secondAttribute="bottom" constant="62" id="VpF-Ry-Ubf"/>
-                            <constraint firstItem="SET-U0-11c" firstAttribute="trailing" secondItem="U20-Gh-4Xd" secondAttribute="trailingMargin" id="nky-gO-7Wf"/>
-                            <constraint firstItem="wSj-ZK-AoC" firstAttribute="trailing" secondItem="SET-U0-11c" secondAttribute="trailing" id="oef-KJ-ZEJ"/>
-                            <constraint firstItem="SET-U0-11c" firstAttribute="top" secondItem="wSj-ZK-AoC" secondAttribute="bottom" constant="8" symbolic="YES" id="r2l-d3-Z81"/>
+                            <constraint firstItem="qGf-Hr-e3Z" firstAttribute="top" secondItem="SET-U0-11c" secondAttribute="bottom" constant="30" id="94W-a0-3fl"/>
+                            <constraint firstItem="wSj-ZK-AoC" firstAttribute="top" secondItem="4gG-Lr-IlX" secondAttribute="bottom" constant="120" id="9oN-Ut-3fc"/>
+                            <constraint firstItem="qGf-Hr-e3Z" firstAttribute="centerX" secondItem="SET-U0-11c" secondAttribute="centerX" id="GgM-oI-LQK"/>
+                            <constraint firstItem="wSj-ZK-AoC" firstAttribute="trailing" secondItem="U20-Gh-4Xd" secondAttribute="trailingMargin" id="Lng-LM-6WP"/>
+                            <constraint firstItem="wSj-ZK-AoC" firstAttribute="leading" secondItem="U20-Gh-4Xd" secondAttribute="leadingMargin" id="dRL-LE-Ue9"/>
+                            <constraint firstItem="SET-U0-11c" firstAttribute="top" secondItem="wSj-ZK-AoC" secondAttribute="bottom" constant="30" id="iMS-CX-mfe"/>
+                            <constraint firstItem="SET-U0-11c" firstAttribute="leading" secondItem="U20-Gh-4Xd" secondAttribute="leadingMargin" id="k5a-AG-TXk"/>
+                            <constraint firstItem="SET-U0-11c" firstAttribute="trailing" secondItem="U20-Gh-4Xd" secondAttribute="trailingMargin" id="u2g-9u-m2h"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="New Concert" id="GTq-dp-h3g">
