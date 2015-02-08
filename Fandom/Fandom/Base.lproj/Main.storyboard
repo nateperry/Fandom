@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="mSn-Tr-CM4">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="mSn-Tr-CM4">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
         <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
@@ -135,7 +135,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="536"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This is the concert Review Page" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NS5-Ku-pjA">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="This is the concert Review Page" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NS5-Ku-pjA">
                                 <rect key="frame" x="163" y="20" width="275" height="137"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -162,19 +162,19 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8ZG-1T-SZg">
-                                <rect key="frame" x="204" y="259" width="192" height="34"/>
+                                <rect key="frame" x="204" y="207" width="192" height="34"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="192" id="a7e-jK-LNV"/>
-                                    <constraint firstAttribute="height" constant="34" id="iE0-TX-asM"/>
+                                    <constraint firstAttribute="height" constant="34" id="WZA-B5-cUs"/>
+                                    <constraint firstAttribute="width" constant="192" id="ZXo-9P-HgK"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rT8-Qh-6dO">
-                                <rect key="frame" x="267" y="480" width="67" height="30"/>
+                                <rect key="frame" x="267" y="353" width="67" height="30"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="67" id="jhN-x3-8fu"/>
+                                    <constraint firstAttribute="width" constant="67" id="5LJ-qh-oni"/>
                                 </constraints>
                                 <state key="normal" title="Camera">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -186,10 +186,10 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="8ZG-1T-SZg" firstAttribute="top" secondItem="jPu-Nf-k1l" secondAttribute="bottom" constant="195" id="GAk-da-xoD"/>
-                            <constraint firstItem="8ZG-1T-SZg" firstAttribute="centerX" secondItem="kOq-ss-zfn" secondAttribute="centerX" id="GS9-1I-5IY"/>
-                            <constraint firstItem="8ZG-1T-SZg" firstAttribute="centerX" secondItem="rT8-Qh-6dO" secondAttribute="centerX" id="gGh-nb-Mxu"/>
-                            <constraint firstItem="weH-ae-tjg" firstAttribute="top" secondItem="rT8-Qh-6dO" secondAttribute="bottom" constant="41" id="rLR-oB-pmE"/>
+                            <constraint firstItem="weH-ae-tjg" firstAttribute="top" secondItem="rT8-Qh-6dO" secondAttribute="bottom" constant="104" id="FTr-ys-flb"/>
+                            <constraint firstItem="8ZG-1T-SZg" firstAttribute="top" secondItem="jPu-Nf-k1l" secondAttribute="bottom" constant="213" id="Hs1-C8-N0k"/>
+                            <constraint firstItem="rT8-Qh-6dO" firstAttribute="centerX" secondItem="8ZG-1T-SZg" secondAttribute="centerX" id="K3y-6o-zpm"/>
+                            <constraint firstItem="8ZG-1T-SZg" firstAttribute="centerX" secondItem="kOq-ss-zfn" secondAttribute="centerX" id="ji0-C0-KYd"/>
                         </constraints>
                     </view>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics" translucent="NO"/>
@@ -197,45 +197,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hVV-GB-ahR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="4604" y="-627"/>
-        </scene>
-        <!--Camera View Controller-->
-        <scene sceneID="u7Y-mB-SME">
-            <objects>
-                <viewController id="BBm-UE-SpV" customClass="CameraViewController" customModule="Fandom" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="bxR-87-hwF"/>
-                        <viewControllerLayoutGuide type="bottom" id="Tv5-p4-DjO"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="evX-gC-nmI">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h53-dz-s8O">
-                                <rect key="frame" x="16" y="13" width="58" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="58" id="Bub-aW-HIQ"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="15"/>
-                                <state key="normal" title="Done">
-                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="cancelCamera:" destination="BBm-UE-SpV" eventType="touchUpInside" id="BDJ-zg-cQf"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="h53-dz-s8O" firstAttribute="leading" secondItem="evX-gC-nmI" secondAttribute="leadingMargin" id="0TN-Af-9J6"/>
-                            <constraint firstItem="Tv5-p4-DjO" firstAttribute="top" secondItem="h53-dz-s8O" secondAttribute="bottom" constant="557" id="Wu8-wa-9RL"/>
-                            <constraint firstItem="h53-dz-s8O" firstAttribute="top" secondItem="evX-gC-nmI" secondAttribute="topMargin" constant="13" id="ogc-0C-XJn"/>
-                        </constraints>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="SeN-bZ-HfJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="4604" y="77"/>
         </scene>
         <!--About-->
         <scene sceneID="wg7-f3-ORb">
@@ -249,7 +210,7 @@
                         <rect key="frame" x="0.0" y="64" width="600" height="536"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" showsHorizontalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4v5-Rv-naE">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4v5-Rv-naE">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="487"/>
                                 <subviews>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" scrollEnabled="NO" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="koG-O0-pIS">

@@ -42,115 +42,27 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Fandom/CameraViewController.swift"
-            timestampString = "445034023.645292"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "93"
-            endingLineNumber = "93"
-            landmarkName = "focusTo(_:)"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Fandom/CameraViewController.swift"
-            timestampString = "445034023.645292"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "92"
-            endingLineNumber = "92"
-            landmarkName = "focusTo(_:)"
-            landmarkType = "5">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Fandom.CameraViewController.focusTo (Fandom.CameraViewController)(Swift.Float) -&gt; ()"
-                  moduleName = "Fandom"
-                  urlString = "file:///Users/Danny/Documents/GitHub/Fandom/Fandom/Fandom/CameraViewController.swift"
-                  timestampString = "445032204.500324"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "93"
-                  endingLineNumber = "93"
-                  offsetFromSymbolStart = "344">
-               </Location>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Fandom.CameraViewController.(focusTo (Fandom.CameraViewController) -&gt; (Swift.Float) -&gt; ()).(closure #1)"
-                  moduleName = "Fandom"
-                  urlString = "file:///Users/Danny/Documents/GitHub/Fandom/Fandom/Fandom/CameraViewController.swift"
-                  timestampString = "445032204.500808"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "93"
-                  endingLineNumber = "93"
-                  offsetFromSymbolStart = "16">
-               </Location>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "reabstraction thunk helper from @callee_owned (@unowned C.CMTime) -&gt; (@unowned ()) to @callee_owned (@in C.CMTime) -&gt; (@out ())"
-                  moduleName = "Fandom"
-                  urlString = "file:///Users/Danny/Documents/GitHub/Fandom/Fandom/Fandom/CameraViewController.swift"
-                  timestampString = "445032204.501124"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "93"
-                  endingLineNumber = "93"
-                  offsetFromSymbolStart = "0">
-               </Location>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "reabstraction thunk helper from @callee_owned (@in C.CMTime) -&gt; (@out ()) to @callee_owned (@unowned C.CMTime) -&gt; (@unowned ())"
-                  moduleName = "Fandom"
-                  urlString = "file:///Users/Danny/Documents/GitHub/Fandom/Fandom/Fandom/CameraViewController.swift"
-                  timestampString = "445032204.501656"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "93"
-                  endingLineNumber = "93"
-                  offsetFromSymbolStart = "0">
-               </Location>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "reabstraction thunk helper from @callee_owned (@unowned C.CMTime) -&gt; (@unowned ()) to @callee_unowned @objc_block (@unowned C.CMTime) -&gt; (@unowned ())"
-                  moduleName = "Fandom"
-                  urlString = "file:///Users/Danny/Documents/GitHub/Fandom/Fandom/Fandom/CameraViewController.swift"
-                  timestampString = "445032204.502131"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "93"
-                  endingLineNumber = "93"
-                  offsetFromSymbolStart = "28">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Fandom/CameraViewController.swift"
             timestampString = "445033655.726893"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "11"
             endingLineNumber = "11">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Fandom/ConcertViewController.swift"
+            timestampString = "445046020.271563"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "78"
+            endingLineNumber = "78"
+            landmarkName = "imagePickerController(_:didFinishPickingMediaWithInfo:)"
+            landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
