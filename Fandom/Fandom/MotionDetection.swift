@@ -32,12 +32,17 @@ class MotionDetection {
                     self.accelY = data.acceleration.y;
                     self.accelZ = data.acceleration.z;
                     
-                    self.delta = self.accelX + self.accelY + self.accelZ;
-                    println(abs(self.delta));
+                    self.delta += self.accelX + self.accelY + self.accelZ;
+                    
+                    println("\(self.delta)");
                 }
             }; //end of accelerometer updates to queue
         } else {
             println("Accelerometer not available.");
         }
+    }
+    
+    func getDelta() -> Double {
+        return abs(delta) * 100.0;
     }
 }

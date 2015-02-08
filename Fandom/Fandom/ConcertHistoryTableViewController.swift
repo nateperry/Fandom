@@ -63,11 +63,11 @@ class ConcertHistoryTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCellWithIdentifier("ConcertCell", forIndexPath: indexPath) as ConcertHistoryTableViewCell
         
         // get the concert object
-        let concert = Concert(dataSet:concerts[indexPath.row])
+        let concert = Concert(dataSet:concerts[indexPath.section])
         
         // populate the cell
-        cell.labelBandName.text = "Bands: " + concert.bands
-        cell.labelVenue.text = "Venue: " + concert.venue
+        cell.labelBandName.text = concert.bands
+        cell.labelVenue.text = concert.venue
         cell.labelScore.text = String(concert.score)
         cell.labelDate.text = concert.date
         return cell

@@ -13,11 +13,29 @@ import AssetsLibrary
 class ConcertViewController: UIViewController,UINavigationControllerDelegate, UIImagePickerControllerDelegate {
     let motionData:MotionDetection = MotionDetection();
     
-    override func viewWillAppear(animated: Bool) {
-        //this stops accelerometer from running duplicates
-        if(!motionData.motionManager.accelerometerActive){
-            motionData.movement();
+    @IBOutlet weak var labelScore: UILabel!
+    
+    @IBOutlet weak var buttonStartMotion: UIButton!
+    @IBOutlet weak var buttonStopMotion: UIButton!
+    
+    @IBAction func toggleStartMotion(sender: AnyObject) {
+        //start - IFF the accelerometer is not running
+        if(buttonStartMotion.titleLabel?.text == "Start") {
+            if(!motionData.motionManager.accelerometerActive) {
+                motionData.movement();
+            }
+            buttonStartMotion.setTitle("Pause", forState: UIControlState.Normal);
+        } else {
+            motionData.motionManager.stopAccelerometerUpdates();
+            buttonStartMotion.setTitle("Start", forState: UIControlState.Normal);
         }
+    }
+    
+    @IBAction func toggleStopMotion(sender: AnyObject) {
+        motionData.motionManager.stopAccelerometerUpdates();
+        
+        buttonStartMotion.userInteractionEnabled = false;
+        buttonStartMotion.alpha = 0.4;
     }
     
     /*
@@ -38,11 +56,17 @@ class ConcertViewController: UIViewController,UINavigationControllerDelegate, UI
         }
     }
     
+    func updateScore() {
+        labelScore.text = "\(Int(motionData.getDelta()))";
+    }
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        
+        var timer = NSTimer.scheduledTimerWithTimeInterval(1.5, target: self, selector: Selector("updateScore"), userInfo: nil, repeats: true)
     }
 
     override func didReceiveMemoryWarning() {
