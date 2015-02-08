@@ -32,7 +32,8 @@ class MotionDetection {
                     self.accelY = data.acceleration.y;
                     self.accelZ = data.acceleration.z;
                     
-                    self.delta = self.accelX + self.accelY + self.accelZ;
+                    self.delta += self.accelX + self.accelY + self.accelZ;
+                    
                     println("\(self.delta)");
                 }
             }; //end of accelerometer updates to queue
@@ -42,6 +43,6 @@ class MotionDetection {
     }
     
     func getDelta() -> Double {
-        return self.delta;
+        return abs(delta) * 100.0;
     }
 }
