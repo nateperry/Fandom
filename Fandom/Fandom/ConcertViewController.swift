@@ -14,6 +14,11 @@ import CoreImage
 
 class ConcertViewController: UIViewController,UINavigationControllerDelegate, UIImagePickerControllerDelegate {
     
+    var fireScoreUpdate = NSTimer();
+    var firstInterval: Int = 0;
+    var secondInterval: Int = 0;
+    var total: Int = 0;
+    var delta: Int = 0;
     //Motion detector
     let motionData:MotionDetection = MotionDetection();
 
@@ -68,10 +73,30 @@ class ConcertViewController: UIViewController,UINavigationControllerDelegate, UI
         }
     }
     
+    // < 20   : X 0
+    //20 - 40 : x 1
+    //40 - 60 : x 2
+    // > 60   : x 3
     func updateScore() {
-        labelScore.text = "\(Int(motionData.getDelta()))";
+        secondInterval = Int(motionData.getDelta());
+        //should only trigger once!
+        if(firstInterval == 0) {
+            total = total + (secondInterval * 3);
+        } else {
+            delta = abs(secondInterval - firstInterval);
+            if(delta < 2) {
+                //movement is either very small or non existent, do nothing...
+            } else if(delta > 2 && delta < 4) {
+                total = total + (secondInterval);
+            } else if(delta > 4 && delta < 6) {
+                total = total + (secondInterval * 2);
+            } else if(delta > 6) {
+                total = total + (secondInterval * 3);
+            }
+        }
+        firstInterval = secondInterval;
+        labelScore.text = "\(total)";
     }
-    
     
     /*
     // MARK: - Delegates
@@ -81,7 +106,7 @@ class ConcertViewController: UIViewController,UINavigationControllerDelegate, UI
 
         // Do any additional setup after loading the view.
         
-        var timer = NSTimer.scheduledTimerWithTimeInterval(1.5, target: self, selector: Selector("updateScore"), userInfo: nil, repeats: true)
+        fireScoreUpdate = NSTimer.scheduledTimerWithTimeInterval(1.0, target: self, selector: Selector("updateScore"), userInfo: nil, repeats: true);
     }
 
     override func didReceiveMemoryWarning() {
