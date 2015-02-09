@@ -87,26 +87,6 @@ class ConcertViewController: UIViewController,UINavigationControllerDelegate, UI
     //40 - 60 : x 2
     // > 60   : x 3
     func updateScore() {
-<<<<<<< HEAD
-        secondInterval = Int(motionData.getDelta());
-        //should only trigger once!
-        if(firstInterval == 0) {
-            total = total + (secondInterval * 3);
-        } else {
-            delta = abs(secondInterval - firstInterval);
-            if(delta < 2) {
-                //movement is either very small or non existent, do nothing...
-            } else if(delta > 2 && delta < 4) {
-                total = total + (secondInterval);
-            } else if(delta > 4 && delta < 6) {
-                total = total + (secondInterval * 2);
-            } else if(delta > 6) {
-                total = total + (secondInterval * 3);
-            }
-        }
-        firstInterval = secondInterval;
-        labelScore.text = "\(total)";
-=======
         if(buttonStartMotion.titleLabel?.text != "Start") {
             secondInterval = Int(motionData.getDelta());
             //should only trigger once!
@@ -127,7 +107,6 @@ class ConcertViewController: UIViewController,UINavigationControllerDelegate, UI
             firstInterval = secondInterval;
             labelScore.text = "\(total)";
         }
->>>>>>> master
     }
     
     /*
@@ -139,11 +118,6 @@ class ConcertViewController: UIViewController,UINavigationControllerDelegate, UI
         // Do any additional setup after loading the view.
         
         fireScoreUpdate = NSTimer.scheduledTimerWithTimeInterval(1.0, target: self, selector: Selector("updateScore"), userInfo: nil, repeats: true);
-<<<<<<< HEAD
-        
-        
-=======
->>>>>>> master
     }
 
     override func didReceiveMemoryWarning() {
@@ -263,7 +237,7 @@ class ConcertViewController: UIViewController,UINavigationControllerDelegate, UI
         })
     }
     
-<<<<<<< HEAD
+
     
     // MARK: - Picture Notification
     func handlePictureNotification(notification: NSNotification){
@@ -276,7 +250,7 @@ class ConcertViewController: UIViewController,UINavigationControllerDelegate, UI
     
     
 
-=======
+
     // MARK: Core Data Helpers
     
     func saveScore() {
@@ -305,6 +279,6 @@ class ConcertViewController: UIViewController,UINavigationControllerDelegate, UI
             println("Could not fetch \(error), \(error!.userInfo)")
         }
     }
->>>>>>> master
+
 
 }
