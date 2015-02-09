@@ -77,7 +77,7 @@ class ConcertViewController: UIViewController,UINavigationControllerDelegate, UI
             self.presentViewController(picker, animated: true, completion: nil)
         }
         else{
-            NSLog("No Camera.")
+            //NSLog("No Camera.")
         }
     }
     
@@ -151,7 +151,7 @@ class ConcertViewController: UIViewController,UINavigationControllerDelegate, UI
     // MARK: - Camera Delegate Methods
     */
     func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: NSDictionary!) {
-        NSLog("Received image from camera")
+        //NSLog("Received image from camera")
         let mediaType = info[UIImagePickerControllerMediaType] as String
         var originalImage:UIImage?, editedImage:UIImage?, imageToSave:UIImage?
         let compResult:CFComparisonResult = CFStringCompare(mediaType as NSString!, kUTTypeImage, CFStringCompareFlags.CompareCaseInsensitive)
@@ -208,7 +208,7 @@ class ConcertViewController: UIViewController,UINavigationControllerDelegate, UI
                     if (success) {
                         var collectionFetchResult = PHAssetCollection.fetchAssetCollectionsWithLocalIdentifiers([self.assetCollectionPlaceholder.localIdentifier], options: nil)
                         print(collectionFetchResult)
-                        NSLog("created album")
+                        //NSLog("created album")
                         self.assetCollection = collectionFetchResult?.firstObject as PHAssetCollection
                     }
             })
@@ -221,7 +221,7 @@ class ConcertViewController: UIViewController,UINavigationControllerDelegate, UI
             let albumChangeRequest = PHAssetCollectionChangeRequest(forAssetCollection: self.assetCollection, assets: self.photosAsset)
             albumChangeRequest.addAssets([assetPlaceholder])
             }, completionHandler: { success, error in
-                print("added image to album")
+                //print("added image to album")
                 print(error)
         })
         //end
@@ -247,9 +247,9 @@ class ConcertViewController: UIViewController,UINavigationControllerDelegate, UI
             
             var error: NSError?
             if !managedContext.save(&error) {
-                println("Could not save \(error), \(error?.userInfo)")
+                //println("Could not save \(error), \(error?.userInfo)")
             } else {
-                println("saved")
+                //println("saved")
             }
         } else {
             println("Could not fetch \(error), \(error!.userInfo)")

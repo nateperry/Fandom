@@ -239,76 +239,46 @@
                         <rect key="frame" x="0.0" y="64" width="600" height="536"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" showsHorizontalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4v5-Rv-naE">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="487"/>
-                                <subviews>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="koG-O0-pIS">
-                                        <rect key="frame" x="8" y="8" width="2116" height="130"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="130" id="WoD-eo-GUP"/>
-                                        </constraints>
-                                        <string key="text">Fandom adds to any concert experience by tracking how much fun you are actually having. Take pictures, dance around, and be excited. All your actions are scored to create an over all value of how much you enjoyed a show.</string>
-                                        <fontDescription key="fontDescription" name="GillSans-Light" family="Gill Sans" pointSize="24"/>
-                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                    </textView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="The Team" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RsV-vQ-s2k">
-                                        <rect key="frame" x="16" y="145" width="568" height="31"/>
-                                        <fontDescription key="fontDescription" name="Futura-CondensedExtraBold" family="Futura" pointSize="24"/>
-                                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="danny_nguyen.png" translatesAutoresizingMaskIntoConstraints="NO" id="h4W-M3-SsD">
-                                        <rect key="frame" x="24" y="184" width="170" height="170"/>
-                                    </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Nate Perry" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zU2-mU-uBw">
-                                        <rect key="frame" x="-66" y="447" width="369" height="73"/>
-                                        <fontDescription key="fontDescription" name="Futura-CondensedExtraBold" family="Futura" pointSize="28"/>
-                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Danny Nguyen" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v1z-T3-rCz">
-                                        <rect key="frame" x="116" y="232" width="369" height="73"/>
-                                        <fontDescription key="fontDescription" name="Futura-CondensedExtraBold" family="Futura" pointSize="28"/>
-                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Nate Kierpiec" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zu1-sH-vXw">
-                                        <rect key="frame" x="194" y="330" width="369" height="73"/>
-                                        <fontDescription key="fontDescription" name="Futura-CondensedExtraBold" family="Futura" pointSize="28"/>
-                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="nate_kierpiec.png" translatesAutoresizingMaskIntoConstraints="NO" id="u28-gu-ssn">
-                                        <rect key="frame" x="369" y="245" width="170" height="170"/>
-                                    </imageView>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z0L-wT-29p">
-                                        <string key="text">This project is hosted on GitHub:
-
-https://github.com/nateperry/Fandom
-</string>
-                                        <fontDescription key="fontDescription" name="GillSans-Light" family="Gill Sans" pointSize="18"/>
-                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                        <dataDetectorType key="dataDetectorTypes" link="YES"/>
-                                    </textView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="nate_perry.png" translatesAutoresizingMaskIntoConstraints="NO" id="CJC-MG-g8Y">
-                                        <rect key="frame" x="263" y="393" width="170" height="170"/>
-                                    </imageView>
-                                </subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="koG-O0-pIS">
+                                <rect key="frame" x="16" y="0.0" width="568" height="126"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstItem="koG-O0-pIS" firstAttribute="trailing" secondItem="4v5-Rv-naE" secondAttribute="trailingMargin" id="7Zi-Pg-TdQ"/>
-                                    <constraint firstItem="koG-O0-pIS" firstAttribute="top" secondItem="4v5-Rv-naE" secondAttribute="topMargin" id="Ehd-xK-cJa"/>
-                                    <constraint firstItem="koG-O0-pIS" firstAttribute="leading" secondItem="4v5-Rv-naE" secondAttribute="leadingMargin" id="SD4-wm-GKb"/>
-                                </constraints>
-                            </scrollView>
+                                <string key="text">Fandom adds to any concert experience by tracking how much fun you are actually having. Take pictures, dance around, and be excited. All your actions are scored to create an over all value of how much you enjoyed a show.</string>
+                                <fontDescription key="fontDescription" name="GillSans-Light" family="Gill Sans" pointSize="24"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Nate Perry" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zU2-mU-uBw">
+                                <rect key="frame" x="16" y="134" width="568" height="73"/>
+                                <fontDescription key="fontDescription" name="Futura-CondensedExtraBold" family="Futura" pointSize="28"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Danny Nguyen" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XBn-Pq-ybw">
+                                <rect key="frame" x="16" y="215" width="568" height="73"/>
+                                <fontDescription key="fontDescription" name="Futura-CondensedExtraBold" family="Futura" pointSize="28"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Nate Kierpiec" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BUz-bj-fLm">
+                                <rect key="frame" x="16" y="296" width="568" height="73"/>
+                                <fontDescription key="fontDescription" name="Futura-CondensedExtraBold" family="Futura" pointSize="28"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="4v5-Rv-naE" firstAttribute="top" secondItem="L7p-HK-0SC" secondAttribute="bottom" id="BdQ-X3-O49"/>
-                            <constraint firstItem="Djb-ko-YwX" firstAttribute="top" secondItem="4v5-Rv-naE" secondAttribute="bottom" id="FY3-x3-RAW"/>
-                            <constraint firstAttribute="trailing" secondItem="4v5-Rv-naE" secondAttribute="trailing" id="I7W-dX-lh1"/>
-                            <constraint firstItem="4v5-Rv-naE" firstAttribute="leading" secondItem="QS5-Rx-YEW" secondAttribute="leading" id="tc4-qj-aOo"/>
+                            <constraint firstItem="XBn-Pq-ybw" firstAttribute="trailing" secondItem="QS5-Rx-YEW" secondAttribute="trailingMargin" id="1EJ-iG-PDr"/>
+                            <constraint firstItem="koG-O0-pIS" firstAttribute="top" secondItem="L7p-HK-0SC" secondAttribute="bottom" id="AKl-SC-jui"/>
+                            <constraint firstItem="koG-O0-pIS" firstAttribute="leading" secondItem="QS5-Rx-YEW" secondAttribute="leadingMargin" id="FbV-me-dds"/>
+                            <constraint firstItem="BUz-bj-fLm" firstAttribute="trailing" secondItem="QS5-Rx-YEW" secondAttribute="trailingMargin" id="KEn-R8-t5F"/>
+                            <constraint firstItem="XBn-Pq-ybw" firstAttribute="leading" secondItem="QS5-Rx-YEW" secondAttribute="leadingMargin" id="Lxs-rk-Aud"/>
+                            <constraint firstItem="BUz-bj-fLm" firstAttribute="leading" secondItem="QS5-Rx-YEW" secondAttribute="leadingMargin" id="Vk0-o5-PpX"/>
+                            <constraint firstItem="XBn-Pq-ybw" firstAttribute="top" secondItem="zU2-mU-uBw" secondAttribute="bottom" constant="8" id="ekI-Jz-e2u"/>
+                            <constraint firstItem="BUz-bj-fLm" firstAttribute="top" secondItem="XBn-Pq-ybw" secondAttribute="bottom" constant="8" id="hmH-6H-PCB"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="koG-O0-pIS" secondAttribute="trailing" id="mub-z6-b25"/>
+                            <constraint firstItem="zU2-mU-uBw" firstAttribute="top" secondItem="koG-O0-pIS" secondAttribute="bottom" constant="8" id="qdd-xS-oun"/>
+                            <constraint firstItem="zU2-mU-uBw" firstAttribute="leading" secondItem="QS5-Rx-YEW" secondAttribute="leadingMargin" id="reh-2d-AjD"/>
+                            <constraint firstItem="zU2-mU-uBw" firstAttribute="trailing" secondItem="QS5-Rx-YEW" secondAttribute="trailingMargin" id="yXH-cm-brP"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="e8c-82-Gw8"/>
@@ -488,11 +458,8 @@ https://github.com/nateperry/Fandom
         </scene>
     </scenes>
     <resources>
-        <image name="danny_nguyen.png" width="340" height="340"/>
         <image name="fandom_logotype_orange.png" width="1452" height="358"/>
         <image name="first" width="30" height="30"/>
-        <image name="nate_kierpiec.png" width="340" height="340"/>
-        <image name="nate_perry.png" width="340" height="340"/>
         <image name="second" width="30" height="30"/>
     </resources>
 </document>
