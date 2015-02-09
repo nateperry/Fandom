@@ -78,24 +78,26 @@ class ConcertViewController: UIViewController,UINavigationControllerDelegate, UI
     //40 - 60 : x 2
     // > 60   : x 3
     func updateScore() {
-        secondInterval = Int(motionData.getDelta());
-        //should only trigger once!
-        if(firstInterval == 0) {
-            total = total + (secondInterval * 3);
-        } else {
-            delta = abs(secondInterval - firstInterval);
-            if(delta < 2) {
-                //movement is either very small or non existent, do nothing...
-            } else if(delta > 2 && delta < 4) {
-                total = total + (secondInterval);
-            } else if(delta > 4 && delta < 6) {
-                total = total + (secondInterval * 2);
-            } else if(delta > 6) {
+        if(buttonStartMotion.titleLabel?.text != "Start") {
+            secondInterval = Int(motionData.getDelta());
+            //should only trigger once!
+            if(firstInterval == 0) {
                 total = total + (secondInterval * 3);
+            } else {
+                delta = abs(secondInterval - firstInterval);
+                if(delta < 2) {
+                    //movement is either very small or non existent, do nothing...
+                } else if(delta > 2 && delta < 4) {
+                    total = total + (secondInterval);
+                } else if(delta > 4 && delta < 6) {
+                    total = total + (secondInterval * 2);
+                } else if(delta > 6) {
+                    total = total + (secondInterval * 3);
+                }
             }
+            firstInterval = secondInterval;
+            labelScore.text = "\(total)";
         }
-        firstInterval = secondInterval;
-        labelScore.text = "\(total)";
     }
     
     /*
