@@ -68,6 +68,10 @@ class ConcertViewController: UIViewController,UINavigationControllerDelegate, UI
         }
     }
     
+    func updateScore() {
+        labelScore.text = "\(Int(motionData.getDelta()))";
+    }
+    
     
     /*
     // MARK: - Delegates
@@ -76,6 +80,8 @@ class ConcertViewController: UIViewController,UINavigationControllerDelegate, UI
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        
+        var timer = NSTimer.scheduledTimerWithTimeInterval(1.5, target: self, selector: Selector("updateScore"), userInfo: nil, repeats: true)
     }
 
     override func didReceiveMemoryWarning() {

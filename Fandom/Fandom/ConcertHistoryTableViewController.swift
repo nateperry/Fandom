@@ -47,13 +47,11 @@ class ConcertHistoryTableViewController: UITableViewController {
     // MARK: - Table view data source
 
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        // #warning Potentially incomplete method implementation.
         // Return the number of sections.
         return self.concerts.count
     }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete method implementation.
         // Return the number of rows in the section.
         return 1
     }
@@ -63,16 +61,16 @@ class ConcertHistoryTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCellWithIdentifier("ConcertCell", forIndexPath: indexPath) as ConcertHistoryTableViewCell
         
         // get the concert object
-        let concert = Concert(dataSet:concerts[indexPath.row])
+        let concert = Concert(dataSet:concerts[indexPath.section])
         
         // populate the cell
-        cell.labelBandName.text = "Bands: " + concert.bands
-        cell.labelVenue.text = "Venue: " + concert.venue
+        cell.labelBandName.text = concert.bands
+        cell.labelVenue.text = concert.venue
         cell.labelScore.text = String(concert.score)
         cell.labelDate.text = concert.date
         return cell
     }
-
+    
     /*
     // Override to support conditional editing of the table view.
     override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
@@ -107,15 +105,18 @@ class ConcertHistoryTableViewController: UITableViewController {
         return true
     }
     */
-
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         // Get the new view controller using [segue destinationViewController].
         // Pass the selected object to the new view controller.
+        let destination = segue.destinationViewController as ConcertReviewViewController
+        
+        if let indexPath = self.tableView.indexPathForSelectedRow() {
+            var selectedConcert = Concert(dataSet:concerts[indexPath.section])
+            destination.concert = selectedConcert
+        }
     }
-    */
-
 }
