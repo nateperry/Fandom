@@ -32,14 +32,8 @@ class MotionDetection {
                     self.accelY = data.acceleration.y;
                     self.accelZ = data.acceleration.z;
                     
-<<<<<<< HEAD
                     self.delta = self.accelX + self.accelY + self.accelZ;
                     //println("\(self.delta)");
-=======
-                    self.delta += self.accelX + self.accelY + self.accelZ;
-                    
-                    println("\(self.delta)");
->>>>>>> master
                 }
             }; //end of accelerometer updates to queue
         } else {
