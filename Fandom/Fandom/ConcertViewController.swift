@@ -9,10 +9,27 @@
 import UIKit
 import MobileCoreServices
 import AssetsLibrary
+import Photos
+import CoreImage
 
 class ConcertViewController: UIViewController,UINavigationControllerDelegate, UIImagePickerControllerDelegate {
-    let motionData:MotionDetection = MotionDetection();
     
+    var fireScoreUpdate = NSTimer();
+    var firstInterval: Int = 0;
+    var secondInterval: Int = 0;
+    var total: Int = 0;
+    var delta: Int = 0;
+    //Motion detector
+    let motionData:MotionDetection = MotionDetection();
+
+    //Pictures
+    var assetCollection: PHAssetCollection!
+    var albumFound : Bool = false
+    var photosAsset: PHFetchResult!
+    var assetThumbnailSize:CGSize!
+    var collection: PHAssetCollection!
+    var assetCollectionPlaceholder: PHObjectPlaceholder!
+
     @IBOutlet weak var labelScore: UILabel!
     
     @IBOutlet weak var buttonStartMotion: UIButton!
@@ -39,7 +56,7 @@ class ConcertViewController: UIViewController,UINavigationControllerDelegate, UI
     }
     
     /*
-    // MARK: - Access Camera
+    // MARK: - Event Listeners
     */
     @IBAction func takePicture(sender: AnyObject) {
         if (UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.Camera)){
@@ -56,23 +73,55 @@ class ConcertViewController: UIViewController,UINavigationControllerDelegate, UI
         }
     }
     
+    // < 20   : X 0
+    //20 - 40 : x 1
+    //40 - 60 : x 2
+    // > 60   : x 3
     func updateScore() {
-        labelScore.text = "\(Int(motionData.getDelta()))";
+        secondInterval = Int(motionData.getDelta());
+        //should only trigger once!
+        if(firstInterval == 0) {
+            total = total + (secondInterval * 3);
+        } else {
+            delta = abs(secondInterval - firstInterval);
+            if(delta < 2) {
+                //movement is either very small or non existent, do nothing...
+            } else if(delta > 2 && delta < 4) {
+                total = total + (secondInterval);
+            } else if(delta > 4 && delta < 6) {
+                total = total + (secondInterval * 2);
+            } else if(delta > 6) {
+                total = total + (secondInterval * 3);
+            }
+        }
+        firstInterval = secondInterval;
+        labelScore.text = "\(total)";
     }
     
-    
+    /*
+    // MARK: - Delegates
+    */
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
         
-        var timer = NSTimer.scheduledTimerWithTimeInterval(1.5, target: self, selector: Selector("updateScore"), userInfo: nil, repeats: true)
+        fireScoreUpdate = NSTimer.scheduledTimerWithTimeInterval(1.0, target: self, selector: Selector("updateScore"), userInfo: nil, repeats: true);
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
-    }    
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        //this stops accelerometer from running duplicates
+        if(!motionData.motionManager.accelerometerActive){
+            motionData.movement();
+        }
+    }
+    
+    
 
     /*
     // MARK: - Navigation
@@ -85,6 +134,9 @@ class ConcertViewController: UIViewController,UINavigationControllerDelegate, UI
     */
     
     
+    
+    
+    
     /*
     // MARK: - Camera Delegate Methods
     */
@@ -93,25 +145,77 @@ class ConcertViewController: UIViewController,UINavigationControllerDelegate, UI
         let mediaType = info[UIImagePickerControllerMediaType] as String
         var originalImage:UIImage?, editedImage:UIImage?, imageToSave:UIImage?
         let compResult:CFComparisonResult = CFStringCompare(mediaType as NSString!, kUTTypeImage, CFStringCompareFlags.CompareCaseInsensitive)
+        
         if ( compResult == CFComparisonResult.CompareEqualTo ) {
             
             originalImage = info[UIImagePickerControllerOriginalImage] as UIImage?
-
+            let metadata = info[UIImagePickerControllerMediaMetadata] as? NSDictionary
             imageToSave = originalImage
-            //imgView.image = imageToSave
-            //imgView.reloadInputViews()
+            
+            //save image
+            saveToAlbum(imageToSave!)
+            /*
+            let library = ALAssetsLibrary()
+            library.writeImageToSavedPhotosAlbum(imageToSave?.CGImage,
+                metadata: metadata,
+                completionBlock: nil)
+            */
         }
         
         //Send image to PictureView to take care of adding points
         var pictureView = self.storyboard?.instantiateViewControllerWithIdentifier("PictureView") as PictureViewController
         pictureView.modalTransitionStyle = UIModalTransitionStyle.CrossDissolve
-        picker.dismissViewControllerAnimated(true, completion: nil)
-        self.presentViewController(pictureView, animated: true, completion: nil)
+        pictureView.captureImg = imageToSave;
+            picker.dismissViewControllerAnimated(true, completion: {() -> Void in
+                self.presentViewController(pictureView, animated: true, completion: nil)
+                }
+        );
         
     }
     
     func imagePickerControllerDidCancel(picker: UIImagePickerController) {
         picker.dismissViewControllerAnimated(true, completion: nil)
     }
+    
+    // Saves photo to "Fandom" album
+    func saveToAlbum(image: UIImage) {
+        let fetchOptions = PHFetchOptions()
+        fetchOptions.predicate = NSPredicate(format: "title = %@", "Fandom")
+        let collection : PHFetchResult = PHAssetCollection.fetchAssetCollectionsWithType(.Album, subtype: .Any, options: fetchOptions)
+        
+        //Checks if Fandom album exists
+        if let first_obj: AnyObject = collection.firstObject {
+            self.albumFound = true
+            self.assetCollection = collection.firstObject as PHAssetCollection
+        } else {
+            //if not, creates an album
+            PHPhotoLibrary.sharedPhotoLibrary().performChanges({
+                var createAlbumRequest : PHAssetCollectionChangeRequest = PHAssetCollectionChangeRequest.creationRequestForAssetCollectionWithTitle("Fandom")
+                self.assetCollectionPlaceholder = createAlbumRequest.placeholderForCreatedAssetCollection
+                }, completionHandler: { success, error in
+                    self.albumFound = (success ? true: false)
+                    
+                    if (success) {
+                        var collectionFetchResult = PHAssetCollection.fetchAssetCollectionsWithLocalIdentifiers([self.assetCollectionPlaceholder.localIdentifier], options: nil)
+                        print(collectionFetchResult)
+                        NSLog("created album")
+                        self.assetCollection = collectionFetchResult?.firstObject as PHAssetCollection
+                    }
+            })
+        }
+        
+        //Makes a request to save the photo to the album
+        PHPhotoLibrary.sharedPhotoLibrary().performChanges({
+            let assetRequest = PHAssetChangeRequest.creationRequestForAssetFromImage(image)
+            let assetPlaceholder = assetRequest.placeholderForCreatedAsset
+            let albumChangeRequest = PHAssetCollectionChangeRequest(forAssetCollection: self.assetCollection, assets: self.photosAsset)
+            albumChangeRequest.addAssets([assetPlaceholder])
+            }, completionHandler: { success, error in
+                print("added image to album")
+                print(error)
+        })
+        //end
+    }
+    
 
 }
