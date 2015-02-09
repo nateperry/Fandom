@@ -22,6 +22,7 @@ class ConcertViewController: UIViewController,UINavigationControllerDelegate, UI
     var secondInterval: Int = 0;
     var total: Int = 0;
     var delta: Int = 0;
+    
     //Motion detector
     let motionData:MotionDetection = MotionDetection();
 
@@ -131,7 +132,6 @@ class ConcertViewController: UIViewController,UINavigationControllerDelegate, UI
         }
     }
     
-    
 
     /*
     // MARK: - Navigation
@@ -163,7 +163,7 @@ class ConcertViewController: UIViewController,UINavigationControllerDelegate, UI
             imageToSave = originalImage
             
             //save image
-            saveToAlbum(imageToSave!)
+            fetchAlbum(imageToSave!)
             /*
             let library = ALAssetsLibrary()
             library.writeImageToSavedPhotosAlbum(imageToSave?.CGImage,
@@ -171,12 +171,17 @@ class ConcertViewController: UIViewController,UINavigationControllerDelegate, UI
                 completionBlock: nil)
             */
         }
-        
+       
         //Send image to PictureView to take care of adding points
         var pictureView = self.storyboard?.instantiateViewControllerWithIdentifier("PictureView") as PictureViewController
         pictureView.modalTransitionStyle = UIModalTransitionStyle.CrossDissolve
         pictureView.captureImg = imageToSave;
-            picker.dismissViewControllerAnimated(true, completion: {() -> Void in
+        
+        //setup Notification
+        var notifcenter:NSNotificationCenter = NSNotificationCenter.defaultCenter()
+        notifcenter.addObserver(self, selector: "handlePictureNotification:", name: "kPictureNotification", object: pictureView)
+        
+        picker.dismissViewControllerAnimated(true, completion: {() -> Void in
                 self.presentViewController(pictureView, animated: true, completion: nil)
                 }
         );
@@ -188,7 +193,7 @@ class ConcertViewController: UIViewController,UINavigationControllerDelegate, UI
     }
     
     // Saves photo to "Fandom" album
-    func saveToAlbum(image: UIImage) {
+    func fetchAlbum(image: UIImage) {
         let fetchOptions = PHFetchOptions()
         fetchOptions.predicate = NSPredicate(format: "title = %@", "Fandom")
         let collection : PHFetchResult = PHAssetCollection.fetchAssetCollectionsWithType(.Album, subtype: .Any, options: fetchOptions)
@@ -197,6 +202,7 @@ class ConcertViewController: UIViewController,UINavigationControllerDelegate, UI
         if let first_obj: AnyObject = collection.firstObject {
             self.albumFound = true
             self.assetCollection = collection.firstObject as PHAssetCollection
+            savePicture(image)
         } else {
             //if not, creates an album
             PHPhotoLibrary.sharedPhotoLibrary().performChanges({
@@ -210,10 +216,15 @@ class ConcertViewController: UIViewController,UINavigationControllerDelegate, UI
                         print(collectionFetchResult)
                         //NSLog("created album")
                         self.assetCollection = collectionFetchResult?.firstObject as PHAssetCollection
+                        self.savePicture(image)
                     }
             })
         }
-        
+
+        //end
+    }
+    
+    func savePicture(image:UIImage){
         //Makes a request to save the photo to the album
         PHPhotoLibrary.sharedPhotoLibrary().performChanges({
             let assetRequest = PHAssetChangeRequest.creationRequestForAssetFromImage(image)
@@ -224,9 +235,22 @@ class ConcertViewController: UIViewController,UINavigationControllerDelegate, UI
                 //print("added image to album")
                 print(error)
         })
-        //end
     }
     
+
+    
+    // MARK: - Picture Notification
+    func handlePictureNotification(notification: NSNotification){
+        var info:NSDictionary = notification.userInfo!
+        println(total)
+        total += info["score"]!.integerValue
+        labelScore.text = "\(total)"
+        println(total)
+    }
+    
+    
+
+
     // MARK: Core Data Helpers
     
     func saveScore() {
@@ -255,5 +279,6 @@ class ConcertViewController: UIViewController,UINavigationControllerDelegate, UI
             println("Could not fetch \(error), \(error!.userInfo)")
         }
     }
+
 
 }
