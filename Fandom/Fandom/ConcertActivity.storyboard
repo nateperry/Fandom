@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -112,21 +112,46 @@
                         <rect key="frame" x="0.0" y="64" width="600" height="551"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kE9-g5-I37">
-                                <rect key="frame" x="204" y="215" width="192" height="34"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="34" id="YR7-fk-Nut"/>
-                                    <constraint firstAttribute="width" constant="192" id="gHx-te-4lb"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kE9-g5-I37">
+                                <rect key="frame" x="16" y="214" width="568" height="80"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="40"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tzj-vW-CrO">
-                                <rect key="frame" x="267" y="480" width="67" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vgQ-oL-Vra">
+                                <rect key="frame" x="444" y="20" width="140" height="60"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="67" id="bQk-Pr-0S5"/>
+                                    <constraint firstAttribute="height" constant="60" id="Gvb-Vy-3gU"/>
+                                    <constraint firstAttribute="width" constant="140" id="Tan-oQ-qyH"/>
                                 </constraints>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="30"/>
+                                <state key="normal" title="Stop" backgroundImage="fandom_launch_bg_1536x2048.png">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="toggleStopMotion:" destination="jGp-tB-s7B" eventType="touchUpInside" id="e9t-ld-Ung"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RDJ-9s-kcU">
+                                <rect key="frame" x="16" y="20" width="140" height="60"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="B6v-a7-CBU"/>
+                                    <constraint firstAttribute="width" constant="140" id="Oml-dj-1WC"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="30"/>
+                                <state key="normal" title="Start" backgroundImage="fandom_launch_bg_1536x2048.png">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="toggleStartMotion:" destination="jGp-tB-s7B" eventType="touchUpInside" id="CJK-Ki-JnA"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tzj-vW-CrO">
+                                <rect key="frame" x="16" y="356" width="568" height="30"/>
                                 <state key="normal" title="Camera">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -134,44 +159,19 @@
                                     <action selector="takePicture:" destination="jGp-tB-s7B" eventType="touchUpInside" id="7hU-CN-dsY"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vgQ-oL-Vra">
-                                <rect key="frame" x="316" y="122" width="46" height="30"/>
-                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="46" id="FMX-Eg-Kv5"/>
-                                </constraints>
-                                <state key="normal" title="Stop">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="toggleStopMotion:" destination="jGp-tB-s7B" eventType="touchUpInside" id="e9t-ld-Ung"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RDJ-9s-kcU">
-                                <rect key="frame" x="239" y="122" width="46" height="30"/>
-                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="46" id="nNB-7d-GZo"/>
-                                </constraints>
-                                <state key="normal" title="Start">
-                                    <color key="titleColor" red="1" green="0.4264226384" blue="0.21951633649999999" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="0.0" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="toggleStartMotion:" destination="jGp-tB-s7B" eventType="touchUpInside" id="CJK-Ki-JnA"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="vgQ-oL-Vra" firstAttribute="leading" secondItem="RDJ-9s-kcU" secondAttribute="trailing" constant="31" id="Dwe-1H-IyF"/>
-                            <constraint firstItem="RDJ-9s-kcU" firstAttribute="baseline" secondItem="vgQ-oL-Vra" secondAttribute="baseline" id="Fpz-Fk-0iM"/>
-                            <constraint firstItem="kE9-g5-I37" firstAttribute="centerX" secondItem="Tzj-vW-CrO" secondAttribute="centerX" id="KVh-Za-EBC"/>
-                            <constraint firstItem="RDJ-9s-kcU" firstAttribute="top" secondItem="fQW-Zb-0DY" secondAttribute="bottom" constant="102" id="dma-fn-Jj2"/>
-                            <constraint firstItem="RDJ-9s-kcU" firstAttribute="leading" secondItem="2n2-2F-qwf" secondAttribute="leading" constant="239" id="gGE-Fj-xCp"/>
-                            <constraint firstItem="HxY-gv-jfQ" firstAttribute="top" secondItem="Tzj-vW-CrO" secondAttribute="bottom" constant="41" id="iLu-Oc-tuK"/>
-                            <constraint firstItem="kE9-g5-I37" firstAttribute="centerX" secondItem="2n2-2F-qwf" secondAttribute="centerX" id="mPT-6T-bqd"/>
-                            <constraint firstItem="kE9-g5-I37" firstAttribute="top" secondItem="RDJ-9s-kcU" secondAttribute="bottom" constant="63" id="roa-Sq-aVf"/>
+                            <constraint firstItem="kE9-g5-I37" firstAttribute="top" secondItem="RDJ-9s-kcU" secondAttribute="bottom" constant="134" id="EbB-Cd-LGO"/>
+                            <constraint firstItem="vgQ-oL-Vra" firstAttribute="trailing" secondItem="2n2-2F-qwf" secondAttribute="trailingMargin" id="FYn-84-at1"/>
+                            <constraint firstItem="kE9-g5-I37" firstAttribute="leading" secondItem="2n2-2F-qwf" secondAttribute="leadingMargin" id="Fs5-8L-G9K"/>
+                            <constraint firstItem="RDJ-9s-kcU" firstAttribute="leading" secondItem="2n2-2F-qwf" secondAttribute="leadingMargin" id="Ody-g5-uMo"/>
+                            <constraint firstItem="kE9-g5-I37" firstAttribute="trailing" secondItem="2n2-2F-qwf" secondAttribute="trailingMargin" id="PYh-Ax-4e8"/>
+                            <constraint firstItem="Tzj-vW-CrO" firstAttribute="leading" secondItem="2n2-2F-qwf" secondAttribute="leadingMargin" id="V9S-YW-gnU"/>
+                            <constraint firstItem="Tzj-vW-CrO" firstAttribute="trailing" secondItem="2n2-2F-qwf" secondAttribute="trailingMargin" id="cfC-GZ-SnG"/>
+                            <constraint firstItem="vgQ-oL-Vra" firstAttribute="top" secondItem="fQW-Zb-0DY" secondAttribute="bottom" id="pDH-cJ-5rM"/>
+                            <constraint firstItem="RDJ-9s-kcU" firstAttribute="top" secondItem="fQW-Zb-0DY" secondAttribute="bottom" id="psZ-mH-VVJ"/>
+                            <constraint firstItem="Tzj-vW-CrO" firstAttribute="top" secondItem="kE9-g5-I37" secondAttribute="bottom" constant="90" id="seJ-E7-j0H"/>
                         </constraints>
                     </view>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics" translucent="NO"/>
@@ -186,4 +186,7 @@
             <point key="canvasLocation" x="440" y="397"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="fandom_launch_bg_1536x2048.png" width="1536" height="2048"/>
+    </resources>
 </document>
