@@ -10,6 +10,7 @@ import UIKit
 import MobileCoreServices
 import AssetsLibrary
 import Photos
+import CoreImage
 
 class ConcertViewController: UIViewController,UINavigationControllerDelegate, UIImagePickerControllerDelegate {
     
