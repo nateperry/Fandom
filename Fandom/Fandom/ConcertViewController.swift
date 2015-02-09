@@ -56,11 +56,15 @@ class ConcertViewController: UIViewController,UINavigationControllerDelegate, UI
         motionData.motionManager.stopAccelerometerUpdates();
         
         buttonStartMotion.userInteractionEnabled = false;
-        buttonStartMotion.alpha = 0.4;
+        buttonStartMotion.alpha = 0.4
         
         // save the score
         self.saveScore()
         
+        //dismiss
+        self.dismissViewControllerAnimated(true, completion: { () -> Void in
+        })
+
         
     }
     
