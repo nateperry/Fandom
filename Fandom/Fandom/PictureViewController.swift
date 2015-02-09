@@ -14,6 +14,8 @@ import QuartzCore
 
 class PictureViewController: UIViewController,UIImagePickerControllerDelegate{
     
+    @IBOutlet weak var doneBtn: UIButton!
+    @IBOutlet weak var multiplierLabel: UILabel!
     @IBOutlet weak var fanCountLabel: UILabel!
     @IBOutlet weak var pointsLabel: UILabel!
     @IBOutlet weak var picture: UIImageView!
@@ -34,10 +36,35 @@ class PictureViewController: UIViewController,UIImagePickerControllerDelegate{
         NSLog("Recieved Data");
     }
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        /* Visuals */
+        configVisuals()
+        
+    }
+    
     override func viewDidAppear(animated: Bool) {
-        picture.image = captureImg
+        UIView.animateWithDuration(1, delay: 0, options: UIViewAnimationOptions.CurveEaseOut, animations: {
+            self.pointsLabel.alpha = 1
+            }, completion: nil)
+        
         checkFaces(captureImg!)
     }
+    
+    
+    func configVisuals(){
+        //picture
+        picture.image = captureImg
+        
+        //label
+        pointsLabel.alpha = 0;
+        
+        //button
+        doneBtn.layer.borderColor = UIColor.whiteColor().CGColor
+        doneBtn.layer.cornerRadius = 15;
+    }
+    
     
     // MARK: - Face Detection
     func checkFaces(img:UIImage){
@@ -54,45 +81,12 @@ class PictureViewController: UIViewController,UIImagePickerControllerDelegate{
         var ciimg:CIImage? = CIImage(CGImage: cgiimg)
         println("done converting")
         
-        picture.image = UIImage(CIImage: ciimg!)
-        
-        /*get orientation of image taken
-        var orientation:NSNumber
-        switch (img.imageOrientation) {
-            case UIImageOrientation.Up:
-                orientation = 1;
-                break;
-            case UIImageOrientation.Down:
-                orientation = 3;
-                break;
-            case UIImageOrientation.Left:
-                orientation = 8;
-                break;
-            case UIImageOrientation.Right:
-                orientation = 6;
-                break;
-            case UIImageOrientation.UpMirrored:
-                orientation = 2;
-                break;
-            case UIImageOrientation.DownMirrored:
-                orientation = 4;
-                break;
-            case UIImageOrientation.LeftMirrored:
-                orientation = 5;
-                break;
-            case UIImageOrientation.RightMirrored:
-                orientation = 7;
-                break;
-            default:
-                break;
-        }*/
         var faceTotal = 0
         
         for(var i=0; i<=8; i++){
-            var ciimg:CIImage? = CIImage(CGImage: cgiimg)
-            var imageOptions = NSDictionary(objects: [i], forKeys: [CIDetectorImageOrientation])
+            //var imageOptions = NSDictionary(objects: [i], forKeys: [CIDetectorImageOrientation])
             let results = detector.featuresInImage(ciimg, options:[CIDetectorImageOrientation:i]);
-            println(i)
+            //println(i)
             
             //let results:NSArray = detector.featuresInImage(ciimg);
             if results.count > 0 {
@@ -115,7 +109,22 @@ class PictureViewController: UIViewController,UIImagePickerControllerDelegate{
     }//end
     
     func updatePoints(faces:Int){
+        var count = String(faces)
+        fanCountLabel.text = "Fan Count: " + count
         
+        var score = 1000*faces;
+        
+        if faces > 1{
+            multiplierLabel.text = "x" + count
+        
+            UIView.animateWithDuration(1.25, delay: 0.8, options: UIViewAnimationOptions.CurveEaseOut, animations: {
+                self.multiplierLabel.alpha = 0.0
+            
+                UIView.animateWithDuration(1.0, delay: 0.6, options: UIViewAnimationOptions.CurveEaseOut, animations: {
+                    self.pointsLabel.text = "+"+String(score)
+                }, completion: nil)
+            }, completion: nil)
+        }
     }
     
 }

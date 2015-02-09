@@ -10,6 +10,7 @@ import UIKit
 
 class HomeViewController: UIViewController {
     
+    @IBOutlet weak var concertBtn: UIButton!
     @IBAction func selectNewConcert(sender: UIButton) {
         // load the form page
         self.performSegueWithIdentifier("ShowNewConcertForm", sender: self)
@@ -18,6 +19,8 @@ class HomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
+        configVisuals()
     }
 
     override func didReceiveMemoryWarning() {
@@ -25,6 +28,12 @@ class HomeViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    
+    func configVisuals(){
+        concertBtn.layer.cornerRadius = 20
+        concertBtn.layer.borderColor = UIColor.orangeColor().CGColor;
+        concertBtn.layer.borderWidth = 1
+    }
     
 
 
