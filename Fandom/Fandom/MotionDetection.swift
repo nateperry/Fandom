@@ -33,8 +33,6 @@ class MotionDetection {
                     self.accelZ = data.acceleration.z;
                     
                     self.delta = self.accelX + self.accelY + self.accelZ;
-                    
-                    println("\(self.delta)");
                 }
             }; //end of accelerometer updates to queue
         } else {
