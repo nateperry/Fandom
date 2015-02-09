@@ -11,16 +11,17 @@ import MobileCoreServices
 import AssetsLibrary
 import Photos
 import CoreImage
+import CoreData
 
 class ConcertViewController: UIViewController,UINavigationControllerDelegate, UIImagePickerControllerDelegate {
+
+    var currentConcertID:NSManagedObjectID?
     
     var fireScoreUpdate = NSTimer();
     var firstInterval: Int = 0;
     var secondInterval: Int = 0;
     var total: Int = 0;
     var delta: Int = 0;
-    
-    //var pictureView:PictureViewController?
     
     //Motion detector
     let motionData:MotionDetection = MotionDetection();
@@ -56,6 +57,11 @@ class ConcertViewController: UIViewController,UINavigationControllerDelegate, UI
         
         buttonStartMotion.userInteractionEnabled = false;
         buttonStartMotion.alpha = 0.4;
+        
+        // save the score
+        self.saveScore()
+        
+        
     }
     
     /*
@@ -81,6 +87,7 @@ class ConcertViewController: UIViewController,UINavigationControllerDelegate, UI
     //40 - 60 : x 2
     // > 60   : x 3
     func updateScore() {
+<<<<<<< HEAD
         secondInterval = Int(motionData.getDelta());
         //should only trigger once!
         if(firstInterval == 0) {
@@ -99,6 +106,28 @@ class ConcertViewController: UIViewController,UINavigationControllerDelegate, UI
         }
         firstInterval = secondInterval;
         labelScore.text = "\(total)";
+=======
+        if(buttonStartMotion.titleLabel?.text != "Start") {
+            secondInterval = Int(motionData.getDelta());
+            //should only trigger once!
+            if(firstInterval == 0) {
+                total = total + (secondInterval * 3);
+            } else {
+                delta = abs(secondInterval - firstInterval);
+                if(delta < 2) {
+                    //movement is either very small or non existent, do nothing...
+                } else if(delta > 2 && delta < 4) {
+                    total = total + (secondInterval);
+                } else if(delta > 4 && delta < 6) {
+                    total = total + (secondInterval * 2);
+                } else if(delta > 6) {
+                    total = total + (secondInterval * 3);
+                }
+            }
+            firstInterval = secondInterval;
+            labelScore.text = "\(total)";
+        }
+>>>>>>> master
     }
     
     /*
@@ -110,8 +139,11 @@ class ConcertViewController: UIViewController,UINavigationControllerDelegate, UI
         // Do any additional setup after loading the view.
         
         fireScoreUpdate = NSTimer.scheduledTimerWithTimeInterval(1.0, target: self, selector: Selector("updateScore"), userInfo: nil, repeats: true);
+<<<<<<< HEAD
         
         
+=======
+>>>>>>> master
     }
 
     override func didReceiveMemoryWarning() {
@@ -231,6 +263,7 @@ class ConcertViewController: UIViewController,UINavigationControllerDelegate, UI
         })
     }
     
+<<<<<<< HEAD
     
     // MARK: - Picture Notification
     func handlePictureNotification(notification: NSNotification){
@@ -243,5 +276,35 @@ class ConcertViewController: UIViewController,UINavigationControllerDelegate, UI
     
     
 
+=======
+    // MARK: Core Data Helpers
+    
+    func saveScore() {
+        // fetch the data
+        let appDelegate = UIApplication.sharedApplication().delegate as AppDelegate
+        
+        let managedContext = appDelegate.managedObjectContext!
+        
+        let fetchRequest = NSFetchRequest(entityName:"Concert")
+        
+        var error: NSError?
+        
+        let fetchedResults = managedContext.executeFetchRequest(fetchRequest, error: &error) as [NSManagedObject]?
+        
+        if let results = fetchedResults {
+            var concert = results.last
+            concert?.setValue(self.total, forKey:"score")
+            
+            var error: NSError?
+            if !managedContext.save(&error) {
+                println("Could not save \(error), \(error?.userInfo)")
+            } else {
+                println("saved")
+            }
+        } else {
+            println("Could not fetch \(error), \(error!.userInfo)")
+        }
+    }
+>>>>>>> master
 
 }

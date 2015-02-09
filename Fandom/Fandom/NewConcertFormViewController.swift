@@ -58,6 +58,8 @@ class NewConcertFormViewController: UIViewController, UITextFieldDelegate {
             var storyboard = UIStoryboard(name: "ConcertActivity", bundle: nil)
             var controller = storyboard.instantiateViewControllerWithIdentifier("ConcertView") as ConcertViewController
             
+            controller.currentConcertID = concert.objectID
+            
             self.presentViewController(controller, animated: true, completion: nil)
         }
     }

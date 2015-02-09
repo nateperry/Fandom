@@ -20,12 +20,21 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Fandom/ConcertViewController.swift"
+<<<<<<< HEAD
             timestampString = "445127803.100899"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "73"
             endingLineNumber = "73"
             landmarkName = "updateScore()"
+=======
+            timestampString = "445144512.086702"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "81"
+            endingLineNumber = "81"
+            landmarkName = "takePicture(_:)"
+>>>>>>> master
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -36,12 +45,21 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Fandom/ConcertViewController.swift"
+<<<<<<< HEAD
             timestampString = "445127803.100899"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "74"
             endingLineNumber = "74"
             landmarkName = "updateScore()"
+=======
+            timestampString = "445144512.086702"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "82"
+            endingLineNumber = "82"
+            landmarkName = "takePicture(_:)"
+>>>>>>> master
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
