@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
     </dependencies>
     <scenes>
         <!--Picture View Controller-->
@@ -22,12 +22,8 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FTE-dX-9tL">
                                 <rect key="frame" x="271" y="529" width="58" height="30"/>
                                 <constraints>
-<<<<<<< HEAD
-                                    <constraint firstAttribute="width" constant="58" id="eLt-cm-Ndn"/>
-=======
                                     <constraint firstAttribute="width" constant="58" id="mfM-qf-rvg"/>
                                     <constraint firstAttribute="height" constant="30" id="ojQ-xE-0DL"/>
->>>>>>> origin/master
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Avenir-Black" family="Avenir" pointSize="15"/>
                                 <state key="normal" title="Done">
@@ -53,18 +49,12 @@
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
                         <constraints>
-<<<<<<< HEAD
-                            <constraint firstItem="xY8-th-xiD" firstAttribute="top" secondItem="FTE-dX-9tL" secondAttribute="bottom" constant="79" id="523-nw-Uhy"/>
-                            <constraint firstItem="FTE-dX-9tL" firstAttribute="top" secondItem="EeO-QV-J4O" secondAttribute="bottom" constant="471" id="eFk-SY-xqX"/>
-                            <constraint firstItem="FTE-dX-9tL" firstAttribute="centerX" secondItem="Ss8-E7-x1D" secondAttribute="centerX" id="s9u-x6-dje"/>
-=======
                             <constraint firstItem="rJf-vX-1OW" firstAttribute="top" secondItem="EeO-QV-J4O" secondAttribute="bottom" constant="65" id="Pvu-w1-uGA"/>
                             <constraint firstItem="FTE-dX-9tL" firstAttribute="top" secondItem="rJf-vX-1OW" secondAttribute="bottom" constant="56" id="aNj-F3-SUR"/>
                             <constraint firstItem="rJf-vX-1OW" firstAttribute="centerX" secondItem="FTE-dX-9tL" secondAttribute="centerX" id="bE2-7t-2dN"/>
                             <constraint firstItem="rJf-vX-1OW" firstAttribute="leading" secondItem="Ss8-E7-x1D" secondAttribute="leading" id="crz-EA-m8U"/>
                             <constraint firstItem="xY8-th-xiD" firstAttribute="top" secondItem="FTE-dX-9tL" secondAttribute="bottom" constant="41" id="duK-Cw-mDs"/>
                             <constraint firstItem="FTE-dX-9tL" firstAttribute="centerX" secondItem="Ss8-E7-x1D" secondAttribute="centerX" id="thz-nv-Ncb"/>
->>>>>>> origin/master
                         </constraints>
                     </view>
                     <connections>
@@ -89,7 +79,7 @@
                         <rect key="frame" x="0.0" y="64" width="600" height="551"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Score" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kE9-g5-I37">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kE9-g5-I37">
                                 <rect key="frame" x="204" y="215" width="192" height="34"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="34" id="YR7-fk-Nut"/>

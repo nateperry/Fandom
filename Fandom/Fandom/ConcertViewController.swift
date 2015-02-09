@@ -11,8 +11,11 @@ import MobileCoreServices
 import AssetsLibrary
 import Photos
 import CoreImage
+import CoreData
 
 class ConcertViewController: UIViewController,UINavigationControllerDelegate, UIImagePickerControllerDelegate {
+
+    var currentConcertID:NSManagedObjectID?
     
     var fireScoreUpdate = NSTimer();
     var firstInterval: Int = 0;
@@ -53,6 +56,11 @@ class ConcertViewController: UIViewController,UINavigationControllerDelegate, UI
         
         buttonStartMotion.userInteractionEnabled = false;
         buttonStartMotion.alpha = 0.4;
+        
+        // save the score
+        self.saveScore()
+        
+        
     }
     
     /*
@@ -217,5 +225,33 @@ class ConcertViewController: UIViewController,UINavigationControllerDelegate, UI
         //end
     }
     
+    // MARK: Core Data Helpers
+    
+    func saveScore() {
+        // fetch the data
+        let appDelegate = UIApplication.sharedApplication().delegate as AppDelegate
+        
+        let managedContext = appDelegate.managedObjectContext!
+        
+        let fetchRequest = NSFetchRequest(entityName:"Concert")
+        
+        var error: NSError?
+        
+        let fetchedResults = managedContext.executeFetchRequest(fetchRequest, error: &error) as [NSManagedObject]?
+        
+        if let results = fetchedResults {
+            var concert = results.last
+            concert?.setValue(self.total, forKey:"score")
+            
+            var error: NSError?
+            if !managedContext.save(&error) {
+                println("Could not save \(error), \(error?.userInfo)")
+            } else {
+                println("saved")
+            }
+        } else {
+            println("Could not fetch \(error), \(error!.userInfo)")
+        }
+    }
 
 }
