@@ -82,7 +82,9 @@ class ConcertViewController: UIViewController,UINavigationControllerDelegate, UI
             self.presentViewController(picker, animated: true, completion: nil)
         }
         else{
-            //NSLog("No Camera.")
+            var alert = UIAlertController(title: "Error", message: "No Camera", preferredStyle: UIAlertControllerStyle.Alert)
+            alert.addAction(UIAlertAction(title: "Close", style: UIAlertActionStyle.Default, handler: nil))
+            self.presentViewController(alert, animated: true, completion: nil)
         }
     }
     
@@ -120,7 +122,7 @@ class ConcertViewController: UIViewController,UINavigationControllerDelegate, UI
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        
+        configVisuals()
         fireScoreUpdate = NSTimer.scheduledTimerWithTimeInterval(1.0, target: self, selector: Selector("updateScore"), userInfo: nil, repeats: true);
     }
 
@@ -134,6 +136,17 @@ class ConcertViewController: UIViewController,UINavigationControllerDelegate, UI
         if(!motionData.motionManager.accelerometerActive){
             motionData.movement();
         }
+    }
+    
+    
+    func configVisuals(){
+        buttonStartMotion.layer.cornerRadius = 20
+        buttonStartMotion.layer.borderColor = UIColor.orangeColor().CGColor;
+        buttonStartMotion.layer.borderWidth = 1
+        
+        buttonStopMotion.layer.cornerRadius = 20
+        buttonStopMotion.layer.borderColor = UIColor.orangeColor().CGColor;
+        buttonStopMotion.layer.borderWidth = 1
     }
     
 

@@ -92,9 +92,9 @@ class PictureViewController: UIViewController,UIImagePickerControllerDelegate{
         
         var faceTotal = 0
         
-        for(var i=6; i<=8; i++){
+        //for(var i=6; i<=8; i++){
             //var imageOptions = NSDictionary(objects: [i], forKeys: [CIDetectorImageOrientation])
-            let results = detector.featuresInImage(ciimg, options:[CIDetectorImageOrientation:i]);
+            let results = detector.featuresInImage(ciimg, options:[CIDetectorImageOrientation:6]);
             //println(i)
             
             //let results:NSArray = detector.featuresInImage(ciimg);
@@ -111,7 +111,7 @@ class PictureViewController: UIViewController,UIImagePickerControllerDelegate{
             else {
                 //NSLog("NO FACE DUDE")
             }
-        }
+        //}
         
         updatePoints(faceTotal)
         
@@ -128,10 +128,10 @@ class PictureViewController: UIViewController,UIImagePickerControllerDelegate{
         if faces > 1{
             multiplierLabel.text = "x" + count
         
-            UIView.animateWithDuration(1.25, delay: 0.8, options: UIViewAnimationOptions.CurveEaseOut, animations: {
+            UIView.animateWithDuration(0.4, delay: 0, options: UIViewAnimationOptions.CurveEaseOut, animations: {
                 self.multiplierLabel.alpha = 0.0
             
-                UIView.animateWithDuration(1.0, delay: 0.6, options: UIViewAnimationOptions.CurveEaseOut, animations: {
+                UIView.animateWithDuration(1.0, delay: 0.2, options: UIViewAnimationOptions.CurveEaseOut, animations: {
                     self.pointsLabel.text = "+"+String(score)
                 }, completion: nil)
             }, completion: nil)

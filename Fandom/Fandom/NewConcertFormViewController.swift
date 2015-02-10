@@ -15,13 +15,14 @@ class NewConcertFormViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var bandName: UITextField!
     @IBOutlet weak var venueName: UITextField!
     
+    @IBOutlet weak var submitBtn: UIButton!
     @IBAction func onSubmitClick(sender: UIButton) {
         self.submitForm()
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        configVisuals()
         // Do any additional setup after loading the view.
     }
     
@@ -92,6 +93,15 @@ class NewConcertFormViewController: UIViewController, UITextFieldDelegate {
     func textFieldShouldReturn(textField: UITextField!) -> Bool {   //delegate method
         textField.resignFirstResponder()
         return true
+    }
+    
+    
+    
+    //COnfig Visuals
+    func configVisuals(){
+        submitBtn.layer.cornerRadius = 20
+        submitBtn.layer.borderColor = UIColor.orangeColor().CGColor;
+        submitBtn.layer.borderWidth = 1
     }
 
 }
